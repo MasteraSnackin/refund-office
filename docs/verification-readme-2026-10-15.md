@@ -1,0 +1,14 @@
+# README refresh — 15 October 2026
+
+The public README now focuses on seven questions: the operational problem, architecture, running the application, models/APIs/services, assumptions, known limitations and next work. The longer operating, rehearsal and integration procedures remain in their existing guides. Two existing animated screenshots show the local review queue and case canvas with synthetic data; they are not live provider or payment recordings.
+
+## Checks
+
+- The README was reduced from 4,223 words to about 1,280 words, including Markdown and table text. Its repository-relative links resolve, including `ARCHITECTURE.md` and the Archify assets.
+- The review-queue GIF contains 133 frames and the case-canvas GIF 138 frames, both 960×540. MP4 and still-image alternatives remain linked.
+- The new [Archify overview](diagrams/readme-overview.html) has ten logical components, nine directed relationships and 17 verified source references pinned to commit `716dff9f8a82b1d4c26ae207f8efdc78893deacb`. Its [editable JSON](diagrams/readme-overview.architecture.json), [delivery receipt](diagrams/readme-overview.delivery.json) and [visual review](diagrams/readme-overview.review.json) retain the exact source and artifact hashes. All nine showcase checks passed without errors or warnings, and automated desktop browser checks and light/dark image inspection passed. New interaction playback was not tested.
+- A fresh `npm ci --no-audit --no-fund` completed against the published package and lockfile with a fresh cache, Node.js 26.10.0 and npm 11.19.1. The committed application source was then extracted into that isolated folder and `npm run build` passed. No extra install scripts were approved; package and lockfile hashes stayed unchanged. The current application, databases and dependency installation were untouched.
+- The application test suite was not rerun for this documentation change. The earlier [source upload verification](https://github.com/MasteraSnackin/refund-office/blob/716dff9f8a82b1d4c26ae207f8efdc78893deacb/docs/verification-github-source-2026-10-15.md) retains its separate 834-test checkpoint.
+- Read-only browser inspection of the hosted preview showed the protected Supabase sign-in screen. This did not test sign-in, authenticated case access, role isolation, persistence or providers. The README and architecture distinguish that available release from pending authenticated acceptance.
+
+The new overview is scoped to the PostgreSQL variant. The original SQLite simulator remains the simplest local launch, and the detailed architecture retains the different storage, access and payment contracts. A reviewer approval remains required for every new refund. No application code, financial record, provider setting or hosted release was changed by this refresh.

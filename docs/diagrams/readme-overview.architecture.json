@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Refund Office: investigation to human review",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "animation": "trace",
+    "repository": {
+      "url": "https://github.com/MasteraSnackin/refund-office",
+      "revision": "716dff9f8a82b1d4c26ae207f8efdc78893deacb",
+      "provider": "github"
+    },
+    "views": [
+      {
+        "id": "investigate",
+        "label": "Investigate supplied records",
+        "focus": [
+          "office",
+          "api",
+          "investigation",
+          "policy",
+          "store"
+        ],
+        "note": "Local rules propose. SQL checks the saved amount, evidence, policy and earlier remedies before saving a hold or recommendation."
+      },
+      {
+        "id": "review",
+        "label": "Human decision and output",
+        "focus": [
+          "reviewer",
+          "office",
+          "api",
+          "store",
+          "report"
+        ],
+        "note": "A reviewer approves the exact saved facts and amount. Local PostgreSQL records an unpaid reservation and a downloadable report."
+      },
+      {
+        "id": "optional",
+        "label": "Optional external paths",
+        "focus": [
+          "investigation",
+          "models",
+          "store",
+          "executor",
+          "stripe"
+        ],
+        "note": "Explicit opt-ins are required. A separate test authorisation and executor are needed for Stripe; local previews cannot pay."
+      }
+    ]
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [
+      40,
+      90
+    ],
+    "cols": 5,
+    "cellW": 180,
+    "cellH": 84,
+    "gapX": 100,
+    "gapY": 130
+  },
+  "components": [
+    {
+      "id": "reviewer",
+      "type": "external",
+      "label": "Human reviewer",
+      "sublabel": "Every refund needs approval",
+      "col": 0,
+      "row": 0,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "server/runtime-service.mjs",
+          "line": 309,
+          "end_line": 327,
+          "label": "Reviewer-only decision"
+        }
+      ],
+      "tag": "Required"
+    },
+    {
+      "id": "office",
+      "type": "frontend",
+      "label": "Office interface",
+      "sublabel": "React office + case canvas",
+      "col": 0,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "src/App.jsx",
+          "line": 232,
+          "end_line": 260,
+          "label": "Review and approval UI"
+        }
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "Node.js API",
+      "sublabel": "Session + role controls",
+      "col": 1,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "server/runtime-api.mjs",
+          "line": 42,
+          "end_line": 61,
+          "label": "Local HTTP boundary"
+        },
+        {
+          "path": "server/runtime-api.mjs",
+          "line": 138,
+          "end_line": 147,
+          "label": "Case routes"
+        }
+      ]
+    },
+    {
+      "id": "investigation",
+      "type": "backend",
+      "label": "Investigation",
+      "sublabel": "Local rules by default",
+      "col": 2,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "server/runtime-service.mjs",
+          "line": 107,
+          "end_line": 116,
+          "label": "Default analyser"
+        },
+        {
+          "path": "server/runtime-service.mjs",
+          "line": 208,
+          "end_line": 222,
+          "label": "Proposal handoff"
+        }
+      ],
+      "tag": "One bounded workflow"
+    },
+    {
+      "id": "policy",
+      "type": "security",
+      "label": "Deterministic checks",
+      "sublabel": "Evidence, value, policy",
+      "col": 3,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "integrations/supabase/runtime/001_runtime.sql",
+          "line": 183,
+          "end_line": 209,
+          "label": "SQL policy evaluation"
+        },
+        {
+          "path": "integrations/supabase/runtime/008_model_investigation.sql",
+          "line": 54,
+          "end_line": 70,
+          "label": "Validate and save outcome"
+        }
+      ],
+      "tag": "Cannot be overridden by a model"
+    },
+    {
+      "id": "store",
+      "type": "database",
+      "label": "Case database",
+      "sublabel": "Local PostgreSQL rehearsal",
+      "col": 4,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "server/local-postgres-runtime.mjs",
+          "line": 75,
+          "end_line": 115,
+          "label": "Checked reads and writes"
+        },
+        {
+          "path": "integrations/supabase/runtime/001_runtime.sql",
+          "line": 295,
+          "end_line": 322,
+          "label": "Atomic approval + reservation"
+        }
+      ],
+      "tag": "Approval is not payment"
+    },
+    {
+      "id": "models",
+      "type": "external",
+      "label": "OpenAI / Anthropic",
+      "sublabel": "Optional proposal adapters",
+      "col": 2,
+      "row": 0,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "server/investigation-proposal.mjs",
+          "line": 46,
+          "end_line": 62,
+          "label": "Explicit analyser opt-in"
+        },
+        {
+          "path": "server/claude-investigator.mjs",
+          "line": 7,
+          "end_line": 17,
+          "label": "Read-only Claude tools"
+        }
+      ],
+      "tag": "Not used by local rules"
+    },
+    {
+      "id": "report",
+      "type": "backend",
+      "label": "Saved decision report",
+      "sublabel": "Evidence + checks + history",
+      "col": 1,
+      "row": 2,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "server/runtime-service.mjs",
+          "line": 340,
+          "end_line": 352,
+          "label": "Read-only exports"
+        },
+        {
+          "path": "server/runtime-outputs.mjs",
+          "line": 45,
+          "end_line": 78,
+          "label": "Report builder"
+        }
+      ],
+      "tag": "Downloadable output"
+    },
+    {
+      "id": "stripe",
+      "type": "external",
+      "label": "Stripe test API",
+      "sublabel": "Submit + independent readback",
+      "col": 3,
+      "row": 2,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "server/runtime-payments.mjs",
+          "line": 162,
+          "end_line": 180,
+          "label": "Gated Stripe test adapter"
+        }
+      ],
+      "tag": "Prepared; acceptance unverified"
+    },
+    {
+      "id": "executor",
+      "type": "security",
+      "label": "Separate executor",
+      "sublabel": "Exact fresh test authorisation",
+      "col": 4,
+      "row": 2,
+      "size": [
+        180,
+        84
+      ],
+      "sources": [
+        {
+          "path": "server/runtime-payments.mjs",
+          "line": 17,
+          "end_line": 20,
+          "label": "Execution opt-in gate"
+        },
+        {
+          "path": "server/runtime-payments.mjs",
+          "line": 87,
+          "end_line": 121,
+          "label": "Submit and reconcile"
+        }
+      ],
+      "tag": "Disabled in local preview"
+    }
+  ],
+  "connections": [
+    {
+      "id": "human-review",
+      "from": "reviewer",
+      "to": "office",
+      "label": "review / approve",
+      "variant": "security",
+      "labelAt": [
+        130,
+        188
+      ]
+    },
+    {
+      "id": "office-api",
+      "from": "office",
+      "to": "api",
+      "label": "JSON /api",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-investigation",
+      "from": "api",
+      "to": "investigation",
+      "label": "claim work",
+      "variant": "emphasis"
+    },
+    {
+      "id": "proposal-check",
+      "from": "investigation",
+      "to": "policy",
+      "label": "validate proposal",
+      "variant": "emphasis"
+    },
+    {
+      "id": "save-outcome",
+      "from": "policy",
+      "to": "store",
+      "label": "atomic save",
+      "variant": "emphasis"
+    },
+    {
+      "id": "optional-model",
+      "from": "investigation",
+      "to": "models",
+      "label": "gated HTTPS",
+      "variant": "dashed"
+    },
+    {
+      "id": "saved-report",
+      "from": "api",
+      "to": "report",
+      "label": "saved packet",
+      "variant": "default",
+      "labelAt": [
+        410,
+        402
+      ]
+    },
+    {
+      "id": "execution-intent",
+      "from": "store",
+      "to": "executor",
+      "label": "new authority + claim",
+      "variant": "security",
+      "labelAt": [
+        1250,
+        402
+      ]
+    },
+    {
+      "id": "stripe-test",
+      "from": "executor",
+      "to": "stripe",
+      "label": "test POST + GET",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Local default",
+      "items": [
+        "Synthetic cases; local rules investigate. PostgreSQL saves recommendations, review decisions and unpaid reservations.",
+        "The original SQLite simulator is a separate run mode. This overview follows the PostgreSQL workflow."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Human control",
+      "items": [
+        "The reviewer decides on the exact saved amount and evidence. Changed facts require fresh review.",
+        "A reservation is not a payment. Test execution has a separate authorisation and executor."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Evidence boundary",
+      "items": [
+        "Source snapshot: commit 716dff9. Animated paths illustrate architecture, not live traffic.",
+        "Hosted and provider acceptance are checked separately. More adapters and observability are in the detailed architecture."
+      ]
+    }
+  ]
+}

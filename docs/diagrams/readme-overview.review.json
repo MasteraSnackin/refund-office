@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "diagramType": "architecture",
+  "sourceRevision": "716dff9f8a82b1d4c26ae207f8efdc78893deacb",
+  "artifact": {
+    "sha256": "f0d35856193278ef16f33cdad08f7aa36cc70843822fcc59318a4ea6d55ec0fa",
+    "bytes": 819576
+  },
+  "specification": {
+    "sha256": "112c997518079e938dff95203c170f973e5ae2e312f72909a3f7c3c137406ec7",
+    "bytes": 9839
+  },
+  "validation": "9/9 showcase, 0 errors, 0 warnings",
+  "browserEvidence": "passed",
+  "visualReview": "passed",
+  "visualReviewScope": [
+    "2048x1320 light",
+    "1440x900 dark"
+  ],
+  "observations": [
+    "The main left-to-right path, branches and labelled arrows are readable with no visible overlaps.",
+    "Both themes retain distinct node types and clear cards.",
+    "The composition uses the available height without a large empty lower band."
+  ],
+  "interactionTests": "not run; the generated viewer includes finite reader-controlled motion, guided views and source links, but no new interaction test is claimed.",
+  "correctionRounds": 2,
+  "preview": {
+    "path": "docs/diagrams/readme-overview.preview.png",
+    "sha256": "5d0b4ff02b44dc002b0d7bcf5d7f3e5ceb4c37145f3d46d12976f5c5c573a393"
+  },
+  "scope": "Logical overview of the committed PostgreSQL application variant, not a deployment or live-traffic proof."
+}

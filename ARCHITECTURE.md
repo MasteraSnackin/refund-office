@@ -4,9 +4,9 @@
 
 Refund Office is a web application for investigating synthetic refund requests and recording human decisions. A React miniature office presents the saved workflow, evidence, policy checks and outputs. A supplementary Case canvas, local record-based chat and saved-history replay help inspect those records. The service and database own the financial state; desk activity, canvas layout and playback reflect saved state and cannot grant refund authority.
 
-The original local application uses SQLite and simulated payments. Separate PostgreSQL rehearsals add role checks, durable investigation claims, clarification and retained demo runs. A prepared hosted path uses a Vercel function with Supabase identity and storage. The owner has authorised initial hosting for their use only, in a new synthetic workspace with local analysis and payment execution disabled. Hosted sign-in, membership restrictions, persistence, API routing and usability have not been verified. Other integrations and Arize uploads remain off; local checks do not establish account acceptance.
+The original local application uses SQLite and simulated payments. Separate PostgreSQL rehearsals add role checks, durable investigation claims, clarification and retained demo runs. The hosted path uses a Vercel function with Supabase identity and storage. The protected release is served at [Refund Office](https://refund-office.vercel.app); its sign-in screen and unsigned API access checks have been observed. Successful sign-in, authenticated workspace isolation and saved-case persistence remain unverified. Analysis is local, and payment execution, other provider integrations and Arize uploads remain disabled.
 
-The [initial cloud setup record](docs/verification-initial-cloud-setup-2026-10-15.md) confirms the fresh Supabase operational schema and focused synthetic pack. This is database preparation only: application identities, membership isolation, the investigator invocation and Vercel routing still need acceptance. Optional payment-execution migrations were not applied.
+The [initial cloud setup record](docs/verification-initial-cloud-setup-2026-10-15.md) confirms the fresh Supabase operational schema and focused synthetic pack. Owner reviewer membership is recorded in the database, but application sign-in and authenticated isolation still need acceptance. No hosted investigator or machine identity is configured, so queued cases do not process automatically. Optional payment-execution migrations were not applied.
 
 ## Key requirements
 
@@ -22,6 +22,8 @@ The [initial cloud setup record](docs/verification-initial-cloud-setup-2026-10-1
 - Bound requests, recording size, worker claims and trace retention. Production capacity and recovery targets remain unmeasured.
 
 ## High-level architecture
+
+The [concise Archify overview](docs/diagrams/readme-overview.html) follows the committed PostgreSQL variant; download the HTML to explore its source links and guided views.
 
 The web client calls a case API backed by one application service and a selected store. The original SQLite path has its own legacy engine. The newer PostgreSQL and prepared hosted paths share investigation and review logic, with SQL enforcing transaction boundaries. A database intake table provides work claims; there is no separate message broker. Optional adapters sit outside this core and require their own activation gates.
 
@@ -320,7 +322,7 @@ The core operational migrations [001](integrations/supabase/runtime/001_runtime.
 
 ## Infrastructure & deployment
 
-The local paths and prepared hosting path are separate environments. No shared development/staging/production pipeline is established. The initial owner-only Vercel and Supabase setup is authorised, but deployment and account acceptance remain unverified. Use a new synthetic workspace, the local analyser and disabled payment execution; do not upgrade a retained local rehearsal in place.
+The local paths and hosted path are separate environments. No shared development/staging/production pipeline is established. The initial owner-only Vercel/Supabase release serves its protected sign-in page, while authenticated workflow acceptance remains open. It uses a fresh synthetic workspace, local analysis and disabled payment execution; retained local rehearsals are separate.
 
 | Environment | Application and store | Boundary and current status |
 | --- | --- | --- |
@@ -328,10 +330,10 @@ The local paths and prepared hosting path are separate environments. No shared d
 | Local PostgreSQL rehearsal | UI/API on 4273/4274; isolated durable PostgreSQL volume | Migrations 001/002; selectable test profiles; unpaid reservations only |
 | Clarification/reset rehearsal | UI/API on 4473/4474; separate PostgreSQL volume and reset journal | Migrations 001/002/007; received statements, fresh same-pack runs and local traces |
 | Judge rehearsal | UI/API on 4673/4674; separate rehearsal directory | Offline saved-history demonstration using the reset supervisor |
-| Intended owner-only hosted setup | Vite assets and request-scoped Vercel function; Supabase Auth/PostgreSQL | Prepared source and configuration; real sign-in, restriction, persistence and routing checks remain open |
+| Owner-only hosted setup | Vite assets and request-scoped Vercel function; Supabase Auth/PostgreSQL | Protected sign-in page served; authenticated isolation, persistence and workflow checks remain open |
 | Sites/static packaging | Asset-serving worker and generated hosting metadata | Static prototype packaging; it does not supply the authenticated refund API |
 
-The local previews use installed Node.js dependencies and local assets. SQLite runs in the original API process. Each PostgreSQL rehearsal uses a cached local image in its own network-isolated container and durable volume. The prepared hosted path uses Supabase database RPCs and a Vercel function; account deployment and service acceptance have not been verified.
+The local previews use installed Node.js dependencies and local assets. SQLite runs in the original API process. Each PostgreSQL rehearsal uses a cached local image in its own network-isolated container and durable volume. The hosted path uses Supabase database RPCs and a Vercel function. Its protected release is available, but authenticated service acceptance remains unverified.
 
 Sites packaging creates an asset-serving worker; it does not supply the authenticated refund API. The earlier Vercel offline template remains distinct from the new hosted configuration. Filled environment files, session data, case databases and private snapshots must remain outside shared source archives.
 

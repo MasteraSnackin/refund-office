@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "docs/diagrams/readme-overview.architecture.json",
+  "output": "docs/diagrams/readme-overview.html",
+  "specification": {
+    "sha256": "112c997518079e938dff95203c170f973e5ae2e312f72909a3f7c3c137406ec7",
+    "bytes": 9839
+  },
+  "artifact": {
+    "sha256": "f0d35856193278ef16f33cdad08f7aa36cc70843822fcc59318a4ea6d55ec0fa",
+    "bytes": 819576
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "evidence": {
+    "verified": true,
+    "repository": "https://github.com/MasteraSnackin/refund-office",
+    "revision": "716dff9f8a82b1d4c26ae207f8efdc78893deacb",
+    "references": 17
+  },
+  "receiptPathNormalisation": "Absolute workspace paths were replaced with repository-relative paths for publication. Artifact/specification bytes, hashes and validation results are unchanged."
+}
