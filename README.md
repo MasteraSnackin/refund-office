@@ -6,6 +6,14 @@ Refund Office prepares missing-item refund decisions for small retailers. It gat
 
 The supplied cases are synthetic. Local demos use rules rather than a live model, and every new refund requires human approval. The hosted preview currently presents a protected sign-in screen; authenticated workflow acceptance is still pending.
 
+### Three-minute product demo
+
+https://github.com/user-attachments/assets/7a14798b-90b8-4f99-991c-2730d703eeab
+
+[Watch or download the three-minute demo](https://github.com/user-attachments/assets/7a14798b-90b8-4f99-991c-2730d703eeab) · [Captions (SRT)](docs/demo/refund-office-product-demo-3min.en-GB.srt)
+
+*Recorded on 15 October 2026: synthetic local investigation, clarification, review, saved reports and Case canvas. Local rules power the run; no refund was approved or submitted. The closing scorecard is the earlier SQLite-engine evaluation.*
+
 ## What operational problem it solves
 
 A support agent handling “my item is missing” must compare the complaint with the order, packing record, delivery status and previous refunds. They then need to calculate the right amount, apply the shop's policy and explain the decision.
@@ -26,7 +34,7 @@ Click the animated Archify preview to explore the runtime and prepared integrati
 
 [![Animated Archify runtime map showing investigation, human review and the separate payment boundary](docs/images/animated/refund-office-architecture.gif)](https://refund-office.vercel.app/system-map.html)
 
-[Open the interactive Archify map](https://refund-office.vercel.app/system-map.html) · [Still image](docs/images/animated/refund-office-architecture.jpg) · [Full architecture and data model](ARCHITECTURE.md)
+[Open the interactive Archify map](https://refund-office.vercel.app/system-map.html) · [Payment authority view](https://refund-office.vercel.app/system-map.html#view=payment-boundary) · [Still image](docs/images/animated/refund-office-architecture.jpg) · [Full architecture and data model](ARCHITECTURE.md)
 
 Choose **Live → Play story** for a guided tour, or use search, focus and route tracing. **Still** stops motion. This is illustrated architecture, not live traffic; a drawn provider connection does not establish an active integration.
 
