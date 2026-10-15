@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "purpose": "Finite animated README preview derived from the verified 30-second architecture film; not evidence of live traffic.",
+  "created_date": "2026-10-15",
+  "input": {
+    "path_relative_to_workspace_root": "videos/refund-office-system-map-2026-10-15/renders/refund-office-system-map.mp4",
+    "sha256": "cb6744fa264f9fda14fd16a03db2df21adbccc8ea3d18fc7fc5b3622af9f2807",
+    "bytes": 3847101,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 900,
+    "duration_seconds": 30,
+    "audio_streams": 0
+  },
+  "architecture_source": {
+    "path_relative_to_workspace_root": "videos/refund-office-system-map-2026-10-15/assets/sponsor-runtime.svg",
+    "sha256": "e0f0cb4e0c1f372d2bf90e7968d97386158197c59879737d9df74cd9c94b5116",
+    "components": 12,
+    "connections": 14,
+    "all_original_component_and_connection_ids_retained": true,
+    "source_manifest": "videos/refund-office-system-map-2026-10-15/source-manifest.json",
+    "status": "Frozen authored architecture, prepared disconnected services; not live activity."
+  },
+  "encoding": {
+    "tool": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "gif_filter_complex": "fps=8,colorspace=all=bt709:trc=srgb:format=yuv444p,scale=960:540:flags=lanczos,format=rgb24,split[pgen][puse];[pgen]palettegen=max_colors=128:reserve_transparent=0:stats_mode=diff[palette];[puse][palette]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle",
+    "gif_output_options": [
+      "-loop",
+      "1",
+      "-final_delay",
+      "12"
+    ],
+    "colour_conversion": "Tagged BT.709 source converted to sRGB before palette generation.",
+    "palette_colours_max": 128,
+    "still_seek_seconds": 28.5,
+    "still_filter": "colorspace=all=bt709:trc=srgb:format=yuv444p,scale=960:540:flags=lanczos",
+    "still_output_options": [
+      "-frames:v",
+      "1",
+      "-update",
+      "1",
+      "-q:v",
+      "2"
+    ]
+  },
+  "outputs": {
+    "gif": {
+      "path": "docs/images/animated/refund-office-architecture.gif",
+      "sha256": "9bbcf82ed7b8af52323da3adb3b8590c39fdc75342ec3ecbe66ba72a9cdfd8dd",
+      "bytes": 2443212,
+      "width": 960,
+      "height": 540,
+      "nominal_fps": 8,
+      "frames": 240,
+      "unique_composited_frames": 159,
+      "duration_seconds": 30.0,
+      "frame_delay_values_ms": [
+        120,
+        130
+      ],
+      "netscape_loop_value": 1,
+      "playback": "Finite: original pass plus one repeat; viewers can override GIF loop preferences."
+    },
+    "still": {
+      "path": "docs/images/animated/refund-office-architecture.jpg",
+      "sha256": "70bfd8822db1ef7b2fde5fd976420eefd28c4ac14e5d2cb9d1d0190a0ebdba1d",
+      "bytes": 76762,
+      "width": 960,
+      "height": 540,
+      "source_timestamp_seconds": 28.5,
+      "content": "Complete final overview."
+    }
+  },
+  "verification": {
+    "full_gif_decode": "passed, no errors",
+    "source_hash_unchanged": true,
+    "under_5mb": true,
+    "not_static": true,
+    "sampled_frames_seconds": [
+      0,
+      4,
+      8,
+      12,
+      17.5,
+      20.5,
+      24,
+      28.5,
+      29.875
+    ],
+    "sampled_visual_review": "Nine decoded GIF frames inspected as a contact sheet, plus the full-size JPEG. Captions and the illustrated architecture label are retained. This is sampled inspection, not continuous subjective viewing.",
+    "source_comparison": [
+      {
+        "seconds": 0,
+        "mean_absolute_rgb_error_0_to_255": 1.157329
+      },
+      {
+        "seconds": 12,
+        "mean_absolute_rgb_error_0_to_255": 1.119913
+      },
+      {
+        "seconds": 24,
+        "mean_absolute_rgb_error_0_to_255": 1.04297
+      },
+      {
+        "seconds": 28.5,
+        "mean_absolute_rgb_error_0_to_255": 1.151804
+      }
+    ],
+    "topology": "All 12 original nodes and 14 original edges remain in the frozen source; conversion adds no imagery or connectors.",
+    "label": "Illustrated architecture, not live traffic",
+    "external_requests": 0
+  },
+  "limits": [
+    "The reduced preview cannot make every small overview label as readable as the interactive map; focused zooms retain readable key labels.",
+    "GIF previews provide no interactive controls. Use the linked Archify HTML for search, guided views and Still playback.",
+    "This format conversion does not establish provider access, model execution, approval, payment or deployment."
+  ]
+}

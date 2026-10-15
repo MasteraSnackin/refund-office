@@ -22,13 +22,15 @@ The React/Vite interface calls a Node.js API. One investigation worker gathers s
 
 The quick local demo stores cases in SQLite and includes a payment simulator. The richer rehearsal uses PostgreSQL and records approval as an **unpaid reservation**. The hosted path uses Supabase Auth and PostgreSQL behind a Vercel API. Stripe test execution has a separate authorisation and executor; a recommendation or reservation cannot trigger it.
 
-The Archify overview below follows the PostgreSQL variant.
+Click the animated Archify preview to explore the runtime and prepared integrations. The interactive map opens without sign-in.
 
-[![Archify overview of the investigation, checks, human review and separate payment boundary](docs/diagrams/readme-overview.preview.png)](docs/diagrams/readme-overview.html)
+[![Animated Archify runtime map showing investigation, human review and the separate payment boundary](docs/images/animated/refund-office-architecture.gif)](https://refund-office.vercel.app/system-map.html)
 
-[Download the interactive Archify map](docs/diagrams/readme-overview.html) · [Editable JSON](docs/diagrams/readme-overview.architecture.json) · [Full architecture and data model](ARCHITECTURE.md)
+[Open the interactive Archify map](https://refund-office.vercel.app/system-map.html) · [Still image](docs/images/animated/refund-office-architecture.jpg) · [Full architecture and data model](ARCHITECTURE.md)
 
-GitHub displays the HTML source. Download it and open it locally to use search, focus, route tracing and guided views. In the PostgreSQL office, **System map → Live → Play story** opens the existing animated runtime map. These maps illustrate architecture, not live traffic.
+Choose **Live → Play story** for a guided tour, or use search, focus and route tracing. **Still** stops motion. This is illustrated architecture, not live traffic; a drawn provider connection does not establish an active integration.
+
+The [editable runtime map](docs/diagrams/sponsor-runtime.architecture.json) and [smaller source-linked overview](docs/diagrams/readme-overview.sources.md) are included for technical review.
 
 ![Animated case canvas following saved investigation, policy checks and the pending human decision](docs/images/animated/refund-office-case-canvas.gif)
 
