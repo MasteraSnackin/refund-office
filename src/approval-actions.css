@@ -1,0 +1,55 @@
+.approval-actions{margin-top:15px;min-width:0}
+.approval-summary{padding:13px 15px;border:1px solid #536c54;border-radius:7px;background:#182d23}
+.approval-summary-heading{display:flex;align-items:center;gap:11px;min-width:0}
+.approval-summary-heading>svg{color:#a4dbb6;flex-shrink:0}
+.approval-summary-heading>div{min-width:0;flex:1}
+.approval-mode{display:block;color:#92b7a1;font-size:10px;line-height:1.5}
+.approval-summary-heading h3{font-size:16px;line-height:1.4;margin:3px 0 0;color:#ddf0e4}
+.approval-amount{font-size:27px;line-height:1.2;font-weight:600;font-variant-numeric:tabular-nums;color:#b8ecc8;white-space:nowrap}
+.approval-facts{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:12px;margin:13px 0 0;padding-top:11px;border-top:1px solid #345443}
+.approval-facts>div{min-width:0}
+.approval-facts dt{font-size:10px;color:#8eb09b;margin-bottom:3px}
+.approval-facts dd{font-size:12px;color:#ccdfd3;margin:0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.approval-line-id{display:block;color:#8bac9b;font-size:10px;line-height:1.5;margin-top:2px}
+.approval-actions .approval-scope{font-size:11px;line-height:1.5;color:#a2c1ae;margin:10px 0 0}
+.approval-checks{display:grid;gap:9px;margin:14px 0 17px}
+.approval-checks-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:5px 10px}
+.approval-checks-heading>span{display:inline-flex;align-items:center;gap:7px;color:#abcdb6;font-size:11px;line-height:1.5}
+.approval-checks button{padding:0;border:0;border-bottom:1px solid #456653;background:transparent;color:#a4ccb4;font-size:10px;line-height:1.5;white-space:nowrap}
+.approval-checks button:hover{color:#d8f3e1;border-color:#9cd3ad}
+.approval-checks button:disabled{opacity:.55;cursor:default}
+.approval-evidence{display:flex;align-items:flex-start;flex-wrap:wrap;gap:5px 8px;color:#8da9bb}
+.approval-evidence>svg{flex-shrink:0;margin-top:1px}
+.approval-evidence>span{flex:1;min-width:100px;font-size:11px;line-height:1.5;overflow-wrap:anywhere}
+.approval-evidence>button{margin-left:auto}
+.approval-form>label{display:block;font-size:12px;font-weight:600;color:#dbe8f0;margin-bottom:7px}
+.approval-form>textarea{display:block;width:100%;min-width:0;max-width:100%;resize:vertical;max-height:240px;padding:10px 12px;border:1px solid #496577;border-radius:6px;background:#091722;color:#e8f0f6;font:inherit;font-size:14px;line-height:1.5}
+.approval-form>textarea::placeholder{color:#8097a8}
+.approval-form>textarea:focus-visible{outline:3px solid #bce5ff;outline-offset:3px}
+.approval-form>textarea:disabled{opacity:.65}
+.approval-form .approval-guidance{font-size:11px;line-height:1.5;color:#9cb3c3;margin:8px 0 10px}
+.approval-submit-bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px 13px;position:sticky;bottom:-25px;z-index:2;padding:11px 0 12px;background:#101e29;box-shadow:0 -8px 10px #101e29ee}
+.approval-submit-bar>span{font-size:10px;color:#819f91}
+.approval-submit{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:41px;padding:10px 15px;border:1px solid #73c590;border-radius:5px;background:#27533a;color:#def7e7;font-size:13px;font-weight:600;line-height:1.5}
+.approval-submit:hover{background:#356749;border-color:#96dbad}
+.approval-submit:disabled{opacity:.65;cursor:progress}
+.approval-form .approval-error{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.6;margin:10px 0;color:#ffd391}
+.approval-error>svg{flex-shrink:0;margin-top:2px}
+.approval-error>span{min-width:0;overflow-wrap:anywhere}
+.approval-unavailable{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:1px solid #6d6047;border-radius:6px;background:#2d271d;color:#d5b783}
+.approval-unavailable>svg{flex-shrink:0;margin-top:2px}
+.approval-unavailable>p{font-size:12px;line-height:1.6;margin:0;color:#d5c6ad}
+.approval-alternatives{margin-top:16px;padding:11px 13px;border:1px solid #3d5361;border-radius:6px;background:#11222d}
+.approval-alternatives>summary{cursor:pointer;color:#a6bdcc;font-size:12px;font-weight:500;line-height:1.6;padding:2px 0;list-style-position:outside;margin-left:15px}
+.approval-alternatives>summary::marker{color:#799bab}
+.approval-alternatives>summary:hover{color:#d4e5ef}
+.approval-alternatives>summary:focus-visible{outline:3px solid #bce5ff;outline-offset:4px;border-radius:3px}
+.approval-alternatives[open]>summary{color:#c5d8e4}
+.approval-alternatives>.review-actions{margin-top:12px;padding-top:12px;border-top:1px solid #344b5a}
+.approval-alternatives .review-submit-bar{background:#11222d;box-shadow:0 -8px 10px #11222dee}
+.inspector-body>.approval-return{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;padding:10px 13px;min-height:39px;border:1px solid #528365;border-radius:5px;background:#183527;color:#bce8c9;font-size:12px;font-weight:500;line-height:1.5;text-decoration:none}
+.inspector-body>.approval-return:hover{background:#244b36;border-color:#88bd98;color:#d8f4e1}
+@media(max-width:760px){.approval-alternatives{padding:10px 11px;margin-top:13px}.approval-alternatives>summary{font-size:11px}.inspector-body>.approval-return{width:100%;font-size:12px}.approval-line-id{font-size:9px}}
+@media(max-width:760px){.approval-summary{padding:12px}.approval-summary-heading{gap:8px;flex-wrap:wrap}.approval-summary-heading>svg{width:19px;height:19px}.approval-summary-heading h3{font-size:14px}.approval-amount{font-size:23px}.approval-mode{font-size:9px}.approval-facts{gap:8px;margin-top:11px;padding-top:10px}.approval-facts dt{font-size:9px}.approval-facts dd{font-size:11px}.approval-actions .approval-scope{font-size:10px}.approval-checks{margin:12px 0 15px}.approval-checks-heading>span,.approval-evidence>span{font-size:10px}.approval-checks button{font-size:10px}.approval-form>textarea{font-size:16px}.approval-submit-bar{bottom:-20px;padding-bottom:14px}.approval-submit{width:100%;font-size:12px}.approval-submit-bar>span{font-size:10px}.approval-form .approval-guidance{font-size:10px}}
+@media(max-width:390px){.approval-summary-heading>div{flex-basis:calc(100% - 30px)}.approval-amount{margin-left:27px;font-size:25px}.approval-facts{grid-template-columns:1fr 1fr;gap:10px}.approval-facts>div:first-child{grid-column:1/-1}.approval-evidence{gap:6px}.approval-evidence>button{margin-left:21px}.approval-submit{padding-inline:10px}}
+@media(prefers-reduced-motion:reduce){.approval-actions button,.approval-actions textarea{transition:none!important;animation:none!important}}

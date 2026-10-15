@@ -1,0 +1,31 @@
+{
+  "artifact": "/Users/darkcomet/.codex/.chatgpt-projects/g-p-6accd13b93f8819188f4cfd113dceb75/refund-office/docs/diagrams/refund-office.html",
+  "artifactSHA256": "af059bfb2527a3231283d5b98220546e333fbb7b5c21542b6896982a3912f3d8",
+  "date": "2026-10-13",
+  "surface": "Codex in-app browser",
+  "status": "passed",
+  "checks": [
+    {
+      "action": "Search SQLite",
+      "observed": "1 of 12 nodes; SQLite store result"
+    },
+    {
+      "action": "Select search result",
+      "observed": "Semantic passport with SQLite store and one incoming relationship; focus=store"
+    },
+    {
+      "action": "Open first guided view",
+      "observed": "Human-controlled refund, 6 stops; view=review"
+    },
+    {
+      "action": "Trace Office interface to SQLite store",
+      "observed": "Office interface -> HTTP API -> Workflow engine -> SQLite store; 4 nodes, 3 directed hops; route=client~store"
+    },
+    {
+      "action": "Clear route",
+      "observed": "Full overview restored"
+    }
+  ],
+  "scope": "Authored graph controls only; not application traffic or provider verification",
+  "finalArtifactRetested": true
+}

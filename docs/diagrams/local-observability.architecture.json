@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Refund Office: local observability",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "runtime-capture",
+        "label": "Actual workflow capture",
+        "focus": [
+          "runtime",
+          "observer",
+          "traces"
+        ],
+        "note": "Only invoked operations are traced. Local files persist; optional hosted memory does not. Judge playback creates no work."
+      },
+      {
+        "id": "synthetic-evaluation",
+        "label": "Two application evaluations",
+        "focus": [
+          "packs",
+          "runtime-runner",
+          "runtime",
+          "runner",
+          "engine",
+          "scores",
+          "evaluations"
+        ],
+        "note": "Separate PostgreSQL and SQLite runs compare saved results with committed examples. No refund approval is performed."
+      },
+      {
+        "id": "trace-binding",
+        "label": "Trace binding and privacy",
+        "focus": [
+          "engine",
+          "observer",
+          "traces",
+          "scores"
+        ],
+        "note": "Revision, amount and outcome bind investigations to checks. Text, internal identities, secrets and exception messages are excluded."
+      },
+      {
+        "id": "prepared-upload",
+        "label": "Prepared upload boundary",
+        "focus": [
+          "traces",
+          "exporter",
+          "arize"
+        ],
+        "note": "Uploads are off. Later use needs a selected payload, two opt-ins, the intended space/region/project and account acceptance."
+      }
+    ]
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [
+      40,
+      110
+    ],
+    "cols": 5,
+    "cellW": 180,
+    "cellH": 88,
+    "gapX": 100,
+    "gapY": 185
+  },
+  "components": [
+    {
+      "id": "packs",
+      "type": "database",
+      "label": "Synthetic packs",
+      "sublabel": "Committed expected examples",
+      "col": 0,
+      "row": 0,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "12 + 50 cases"
+    },
+    {
+      "id": "runner",
+      "type": "backend",
+      "label": "Original evaluator",
+      "sublabel": "Fresh in-memory SQLite",
+      "col": 1,
+      "row": 0,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Earlier engine scope"
+    },
+    {
+      "id": "engine",
+      "type": "backend",
+      "label": "Original engine",
+      "sublabel": "Actual local investigations",
+      "col": 2,
+      "row": 0,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Deterministic rules"
+    },
+    {
+      "id": "scores",
+      "type": "backend",
+      "label": "Separate scorecards",
+      "sublabel": "Expected vs saved results",
+      "col": 3,
+      "row": 0,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Engine-specific reports"
+    },
+    {
+      "id": "evaluations",
+      "type": "database",
+      "label": "Evaluation rows",
+      "sublabel": "Recorded investigation IDs",
+      "col": 4,
+      "row": 0,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Prepared \u00b7 not uploaded"
+    },
+    {
+      "id": "runtime",
+      "type": "backend",
+      "label": "PostgreSQL workflow",
+      "sublabel": "Current application service",
+      "col": 1,
+      "row": 1,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Local default; model prepared"
+    },
+    {
+      "id": "observer",
+      "type": "backend",
+      "label": "Metadata recorder",
+      "sublabel": "Invoked operations only",
+      "col": 2,
+      "row": 1,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Local files / hosted memory"
+    },
+    {
+      "id": "traces",
+      "type": "database",
+      "label": "Retained trace records",
+      "sublabel": "Memory snapshot or local files",
+      "col": 3,
+      "row": 1,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Bounded; loss is reported"
+    },
+    {
+      "id": "exporter",
+      "type": "security",
+      "label": "Prepared exporter",
+      "sublabel": "Selected synthetic spans",
+      "col": 4,
+      "row": 1,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Explicit selection + hash"
+    },
+    {
+      "id": "arize",
+      "type": "external",
+      "label": "Arize AX",
+      "sublabel": "Chosen space, region, project",
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Uploads off \u00b7 unverified",
+      "pos": [
+        1160,
+        540
+      ]
+    },
+    {
+      "id": "runtime-runner",
+      "type": "backend",
+      "label": "Current evaluator",
+      "sublabel": "Fresh local PostgreSQL",
+      "col": 0,
+      "row": 1,
+      "size": [
+        180,
+        88
+      ],
+      "tag": "Isolated synthetic tenants"
+    }
+  ],
+  "connections": [
+    {
+      "id": "pack-input",
+      "from": "packs",
+      "to": "runner",
+      "label": "synthetic inputs"
+    },
+    {
+      "id": "run-engine",
+      "from": "runner",
+      "to": "engine",
+      "label": "invoke operations",
+      "variant": "emphasis"
+    },
+    {
+      "id": "observe-results",
+      "from": "engine",
+      "to": "scores",
+      "label": "saved case results"
+    },
+    {
+      "id": "expected-results",
+      "from": "packs",
+      "to": "scores",
+      "label": "committed expectations",
+      "fromSide": "top",
+      "toSide": "top"
+    },
+    {
+      "id": "prepare-evaluations",
+      "from": "scores",
+      "to": "evaluations",
+      "label": "span-bound scores"
+    },
+    {
+      "id": "engine-traces",
+      "from": "engine",
+      "to": "observer",
+      "label": "actual operation metadata",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        690,
+        212
+      ]
+    },
+    {
+      "id": "runtime-traces",
+      "from": "runtime",
+      "to": "observer",
+      "label": "actual operations",
+      "variant": "emphasis"
+    },
+    {
+      "id": "retain-traces",
+      "from": "observer",
+      "to": "traces",
+      "label": "bounded local save"
+    },
+    {
+      "id": "score-traces",
+      "from": "traces",
+      "to": "scores",
+      "label": "recorded trace IDs",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "prepare-export",
+      "from": "traces",
+      "to": "exporter",
+      "label": "explicit selection"
+    },
+    {
+      "id": "upload-off",
+      "from": "exporter",
+      "to": "arize",
+      "label": "opt-in HTTPS; off",
+      "variant": "dashed",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        1250,
+        515
+      ]
+    },
+    {
+      "id": "pack-runtime-input",
+      "from": "packs",
+      "to": "runtime-runner",
+      "label": "synthetic inputs",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelAt": [
+        130,
+        212
+      ]
+    },
+    {
+      "id": "run-runtime",
+      "from": "runtime-runner",
+      "to": "runtime",
+      "label": "bounded investigation",
+      "variant": "emphasis",
+      "labelAt": [
+        270,
+        485
+      ]
+    },
+    {
+      "id": "runtime-results",
+      "from": "runtime",
+      "to": "scores",
+      "label": "independent case readback",
+      "fromSide": "bottom",
+      "toSide": "right",
+      "via": [
+        [
+          410,
+          680
+        ],
+        [
+          1360,
+          680
+        ],
+        [
+          1360,
+          245
+        ],
+        [
+          1100,
+          245
+        ],
+        [
+          1100,
+          154
+        ]
+      ],
+      "labelAt": [
+        900,
+        670
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Current and original reports",
+      "items": [
+        "Current PostgreSQL and original SQLite reports retain separate source versions and actual results.",
+        "Each score binds to a recorded investigation. Lost capture or changed source files prevent an overall pass."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Model and tracing boundaries",
+      "items": [
+        "Hosted model selection is prepared. Local launchers use rules; SQL checks and human approval remain independent.",
+        "Hosted tracing is opt-in memory: 128 spans or 256 KiB. No durable collection or upload is configured."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Explain and validate",
+      "items": [
+        "Judge mode replays saved events and separates later case context. Playback cannot investigate, approve or pay.",
+        "The business kit prepares interviews and timed review. No customer results or savings have been measured."
+      ]
+    }
+  ]
+}

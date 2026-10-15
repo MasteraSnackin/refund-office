@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "diagramType": "architecture",
+  "scope": "Source-reviewed runtime and prepared integrations, including optional selected model proposal and separately consented transcription; no live deployment or provider acceptance.",
+  "artifact": {
+    "sha256": "6b4f7cd8f30f44c903a364f0075f42b6bc6eb772b48d82bde6e5222ca08d5ac0",
+    "bytes": 819927
+  },
+  "specification": {
+    "sha256": "845369f2a9ac17ed6d5338fa5ef9e7ea52a3e5305f1e9a3c620acdd7541fff7b",
+    "bytes": 9122
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "browserEvidence": {
+    "status": "passed",
+    "receipt": "sponsor-runtime.visual-check.json",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "theme": "light",
+        "scrollWidth": 1440,
+        "scrollHeight": 900,
+        "ok": true
+      },
+      {
+        "width": 1600,
+        "height": 1000,
+        "theme": "light",
+        "scrollWidth": 1600,
+        "scrollHeight": 1000,
+        "ok": true
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "theme": "light",
+        "scrollWidth": 1920,
+        "scrollHeight": 1080,
+        "ok": true
+      },
+      {
+        "width": 2048,
+        "height": 1320,
+        "theme": "light",
+        "scrollWidth": 2048,
+        "scrollHeight": 1320,
+        "ok": true
+      }
+    ]
+  },
+  "visualReview": {
+    "status": "passed",
+    "method": "Inspection of exact artifact-bound screenshots and actual in-app map",
+    "inspected": [
+      "sponsor-runtime.visual-check.1440x900.light.png",
+      "sponsor-runtime.visual-check.2048x1320.dark.png",
+      "system-map-app.png"
+    ],
+    "observations": [
+      "Main local route, separate human authority and prepared sponsor paths remain readable in both themes.",
+      "A shorter evidence card resolves the measured six-pixel laptop overflow without changing nodes or edges.",
+      "The embedded narrower-frame toolbar uses a separate row, preventing the title from overlapping its controls.",
+      "The 30-second video contact sheet preserves the same graph with readable route and authority highlights."
+    ],
+    "correctionRounds": 1
+  },
+  "interactionTests": {
+    "status": "passed",
+    "browser": "Codex in-app browser",
+    "checks": [
+      "Embedded map loaded under scripts-only sandbox and network-denying CSP.",
+      "Started Still with story disabled. Live enabled Play story; playback progressed through five authored chapters.",
+      "Still disabled story playback and stopped the story.",
+      "Close and Back to office restored focus to System map. Escape with parent dialog focus closed it; Escape in iframe cleared its own guided view.",
+      "Reload loaded actual map again in Still mode.",
+      "Selected case remained RF-2001, revision 3, twenty pounds awaiting approval.",
+      "Existing Case canvas opened nineteen records and twenty-five connections at revision 3; recommendation inspector still showed twenty pounds waiting for a reviewer."
+    ],
+    "screenshot": "system-map-app.png",
+    "limit": "Display controls only. No case mutation, provider request or payment was performed. Reduced-motion emulation turned office motion off, but iframe media-query propagation was not separately established."
+  },
+  "sourceNotes": "sponsor-runtime.sources.md",
+  "repositoryVerification": "Not available: no verified commit and origin pair in this working folder.",
+  "previousInteractionTests": {
+    "status": "passed",
+    "browser": "Codex in-app browser",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "checks": [
+      "Node finder searched ElevenLabs and returned one of 12 nodes.",
+      "Focusing the result showed two incoming connections, including consented STT.",
+      "Selecting the incoming consented STT relationship focused Runtime API.",
+      "Guided payment-authority view showed seven authored stops and separate executor wording.",
+      "Return to overview and theme switch completed."
+    ],
+    "screenshot": "../../work/documentation-refresh-2026-10-15/map-browser.png",
+    "limit": "Supplementary manual interaction evidence, not a provider or application workflow check."
+  }
+}

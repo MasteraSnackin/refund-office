@@ -1,0 +1,33 @@
+/* Small paper props sit on the existing illustrated desks. */
+.desk-work { position: absolute; width: 2.15%; height: 6%; transform: translate(-50%, -50%); z-index: 4; pointer-events: none; }
+.work-paper { position: absolute; inset: 0; display: flex; flex-direction: column; gap: 12%; padding: 19% 18%; background: #e8cf9c; border: 2px solid #9f784c; box-shadow: 2px 3px 0 #3b2b22a6, inset 0 0 0 1px #ffedbd; overflow: hidden; }
+.work-paper > i { display: block; width: 100%; height: 2px; background: #a78a5e; opacity: .8; }
+.work-paper > i:last-of-type { width: 66%; }
+.paper-scan { position: absolute; left: 4%; right: 4%; top: 15%; height: 2px; background: #9df2b4; box-shadow: 0 0 5px 1px #62d990a0; opacity: 0; }
+.work-evidence .paper-scan { opacity: .85; animation: desk-evidence-scan 1.8s ease-in-out infinite alternate; }
+.work-evidence .work-paper { transform: rotate(-3deg); }
+@keyframes desk-evidence-scan { from { transform: translateY(0); } to { transform: translateY(24px); } }
+.rule-markers { position: absolute; inset: 19% auto 19% 14%; width: 17%; display: flex; flex-direction: column; justify-content: space-between; }
+.rule-markers > i { width: 100%; aspect-ratio: 1; border: 1px solid #507466; background: #658b73; animation: desk-rule-read 2.4s ease-in-out infinite; }
+.rule-markers > i:nth-child(2) { animation-delay: .55s; }
+.rule-markers > i:nth-child(3) { animation-delay: 1.1s; }
+.work-policy .work-paper { padding-left: 40%; }
+@keyframes desk-rule-read { 0%, 65%, 100% { background: #658b73; } 30% { background: #c1e9a6; box-shadow: 0 0 3px #badf9650; } }
+.receipt-slot { position: absolute; left: -15%; right: -15%; top: -8%; height: 18%; border: 2px solid #53606a; background: #15222a; box-shadow: 0 2px 0 #071019; }
+.work-payments .work-paper { transform-origin: top; border-color: #9a9c8b; background: #e1dec8; box-shadow: 2px 3px 0 #171e2380; }
+.work-payments.work-entering .work-paper { animation: desk-print-receipt 2s steps(10, end) .95s both; }
+@keyframes desk-print-receipt { from { clip-path: inset(0 0 92% 0); transform: translateY(-5%); } to { clip-path: inset(0); transform: translateY(0); } }
+.archive-slot { position: absolute; left: -18%; right: -18%; bottom: -8%; height: 32%; background: #263641; border: 2px solid #526068; box-shadow: 0 3px 0 #10191f; }
+.archive-file { position: absolute; width: 135%; max-width: none; height: 115%; object-fit: contain; image-rendering: pixelated; bottom: 0; left: -17%; opacity: 0; }
+.work-archive.work-entering .archive-file { animation: desk-file-away 1.2s ease-in-out 1s both; }
+@keyframes desk-file-away { 0% { opacity: 0; transform: translateY(-65%) rotate(-8deg); } 20%, 60% { opacity: 1; } 65% { transform: translateY(-5%) rotate(0); } 100% { opacity: 0; transform: translateY(20%) scale(.72); } }
+.work-review .work-paper { transform: rotate(5deg); }
+.review-clip { position: absolute; top: -8%; left: 35%; width: 35%; height: 24%; background: #c69543; border: 1px solid #775323; box-shadow: inset 0 2px #ffcf76; }
+.work-review.work-entering { animation: desk-review-settle .55s ease-out 1s both; }
+@keyframes desk-review-settle { from { opacity: 0; transform: translate(-50%, -65%) rotate(-5deg); } to { opacity: 1; transform: translate(-50%, -50%) rotate(0); } }
+.intake-stamp { position: absolute; width: 45%; height: 22%; bottom: 18%; right: 9%; border: 2px solid #52745f; transform: rotate(-12deg); }
+.work-reception.work-entering .intake-stamp { animation: desk-intake-stamp .6s ease-out .4s both; }
+@keyframes desk-intake-stamp { 0% { opacity: 0; transform: translateY(-10px) rotate(-12deg) scale(1.3); } 55% { opacity: 1; transform: translateY(1px) rotate(-12deg) scale(.93); } 100% { opacity: 1; transform: translateY(0) rotate(-12deg) scale(1); } }
+.office-paused .desk-work, .office-paused .desk-work * { animation-play-state: paused !important; }
+.office-motion-off .desk-work, .office-motion-off .desk-work * { animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) { .desk-work, .desk-work * { animation: none !important; transition: none !important; } }

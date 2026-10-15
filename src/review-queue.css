@@ -1,0 +1,19 @@
+.review-queue-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
+.review-queue-intro h3{margin:0 0 5px;color:#dfebf3;font-size:17px;line-height:1.4}
+.review-queue-intro p{margin:0;color:#9db4c4;font-size:12px;line-height:1.6;max-width:340px}
+.review-queue-next{display:inline-flex;align-items:center;justify-content:center;gap:5px;flex-shrink:0;min-height:36px;padding:7px 10px;border:1px solid #609477;border-radius:5px;background:#1c3b2c;color:#bce5ca;font:inherit;font-size:11px;line-height:1.5}
+.review-queue-next:hover:not(:disabled){background:#285339;border-color:#9ecfb0}
+.review-queue-next:disabled{opacity:.55;cursor:default}
+.review-queue-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.review-queue-groups>button{display:flex;align-items:center;gap:11px;min-width:0;min-height:59px;padding:11px 12px;border:1px solid #385366;border-radius:6px;background:#122630;color:#acc3d2;text-align:left;font:inherit;font-size:11px;line-height:1.4}
+.review-queue-groups>button>strong{font-size:21px;font-variant-numeric:tabular-nums;line-height:1.2;min-width:23px;color:#d9e8f1}
+.review-queue-groups>button:hover{background:#1b3440;border-color:#8cae9b}
+.review-queue-groups>button.selected{background:#1a372a;border-color:#699b7a;color:#bce3c9}
+.review-queue-groups>button.selected>strong{color:#b5edc8}
+.review-queue-note{margin:11px 0 19px;color:#8faabc;font-size:11px;line-height:1.7}
+.review-queue-reason{display:block;margin-top:10px;padding-top:9px;border-top:1px solid #304a58;color:#adc1cf;font-size:11px;line-height:1.65;overflow-wrap:anywhere}
+.review-queue-action{display:block;margin-top:5px;color:#a9d2b9;font-size:11px;line-height:1.65;overflow-wrap:anywhere}
+.review-queue-action>strong{font-weight:600}
+.review-queue-groups>button:focus-visible,.review-queue-next:focus-visible{outline:3px solid #bce5ff;outline-offset:3px}
+@media(max-width:550px){.review-queue-intro{display:block}.review-queue-next{margin-top:10px}.review-queue-groups>button{padding:10px;gap:8px}.review-queue-groups>button>strong{font-size:19px}.review-queue-intro h3{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.review-queue-next,.review-queue-groups>button{animation:none!important;transition:none!important}}

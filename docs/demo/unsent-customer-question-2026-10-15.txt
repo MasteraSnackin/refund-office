@@ -1,0 +1,14 @@
+UNSENT CUSTOMER DRAFT
+Case: RF-2008
+Saved revision: 3
+
+Hello,
+
+Thanks for letting us know about order SYN-F12-O008. Could you confirm which item or items did not arrive: “Sketchbook” or “Marker set”? Please tell us the missing quantity for each item.
+
+This will help us review your request.
+
+Thank you.
+
+Internal source references: order:SYN-F12-O008, packing:SYN-F12-O008, delivery:SYN-F12-O008, remedies:SYN-F12-O008
+This application has not sent this message. A received answer must be recorded separately.

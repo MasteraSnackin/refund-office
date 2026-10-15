@@ -1,0 +1,34 @@
+{
+  "name": "Refund Office - gated hosted intake and one investigation",
+  "active": false,
+  "nodes": [
+    {
+      "id": "hosted-webhook", "name": "Authenticated intake", "type": "n8n-nodes-base.webhook", "typeVersion": 2,
+      "position": [0, 0], "parameters": { "httpMethod": "POST", "path": "refund-office-hosted-intake", "authentication": "headerAuth", "responseMode": "responseNode", "options": {} }
+    },
+    {
+      "id": "hosted-validate", "name": "Keep stable event identity", "type": "n8n-nodes-base.code", "typeVersion": 2,
+      "position": [240, 0], "parameters": { "mode": "runOnceForAllItems", "jsCode": "const input = $input.first().json.body;\nif (!input || typeof input !== 'object' || Array.isArray(input) || Object.keys(input).some(k => !['eventId','orderId','complaint'].includes(k))) throw new Error('Only intake fields are accepted.');\nif (!/^[A-Za-z0-9][A-Za-z0-9._:-]{0,119}$/.test(input.eventId || '')) throw new Error('Preserve a stable source event reference.');\nif (!/^[A-Za-z0-9][A-Za-z0-9_-]{0,159}$/.test(input.orderId || '')) throw new Error('A catalogue order is required.');\nif (typeof input.complaint !== 'string' || input.complaint.trim().length < 8 || input.complaint.length > 4000) throw new Error('The complaint is invalid.');\nreturn [{json: {eventId:input.eventId,orderId:input.orderId,complaint:input.complaint.trim()}}];" }
+    },
+    {
+      "id": "hosted-intake", "name": "Save hosted intake", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2, "position": [480, 0], "retryOnFail": false,
+      "parameters": { "method": "POST", "url": "https://REPLACE-WITH-YOUR-APP.invalid/api/machine/intake", "authentication": "genericCredentialType", "genericAuthType": "httpCustomAuth", "sendBody": true, "specifyBody": "json", "jsonBody": "={{ JSON.stringify($json) }}", "options": { "timeout": 45000, "response": { "response": { "responseFormat": "json" } } } }
+    },
+    {
+      "id": "hosted-investigate", "name": "Run one investigation", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2, "position": [720, 0], "retryOnFail": false,
+      "parameters": { "method": "POST", "url": "https://REPLACE-WITH-YOUR-APP.invalid/api/machine/investigate", "authentication": "genericCredentialType", "genericAuthType": "httpCustomAuth", "sendBody": true, "specifyBody": "json", "jsonBody": "{}", "options": { "timeout": 55000, "response": { "response": { "responseFormat": "json" } } } }
+    },
+    {
+      "id": "hosted-respond", "name": "Acknowledge saved intake", "type": "n8n-nodes-base.respondToWebhook", "typeVersion": 1.4, "position": [960, 0],
+      "parameters": { "respondWith": "json", "responseBody": "={{ { accepted: true, eventId: $('Save hosted intake').first().json.request.eventId, paymentAuthorised: false, investigation: $json.empty ? 'No queued case claimed' : 'One case investigated; human review required' } }}", "options": { "responseCode": 202 } }
+    }
+  ],
+  "connections": {
+    "Authenticated intake": { "main": [[{ "node": "Keep stable event identity", "type": "main", "index": 0 }]] },
+    "Keep stable event identity": { "main": [[{ "node": "Save hosted intake", "type": "main", "index": 0 }]] },
+    "Save hosted intake": { "main": [[{ "node": "Run one investigation", "type": "main", "index": 0 }]] },
+    "Run one investigation": { "main": [[{ "node": "Acknowledge saved intake", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1", "saveDataSuccessExecution": "none", "saveDataErrorExecution": "none", "saveManualExecutions": false },
+  "pinData": {}, "tags": []
+}

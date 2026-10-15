@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/darkcomet/.codex/.chatgpt-projects/g-p-6accd13b93f8819188f4cfd113dceb75/refund-office/docs/diagrams/sponsor-runtime.architecture.json",
+  "output": "/Users/darkcomet/.codex/.chatgpt-projects/g-p-6accd13b93f8819188f4cfd113dceb75/refund-office/docs/diagrams/sponsor-runtime.html",
+  "specification": {
+    "sha256": "845369f2a9ac17ed6d5338fa5ef9e7ea52a3e5305f1e9a3c620acdd7541fff7b",
+    "bytes": 9122
+  },
+  "artifact": {
+    "sha256": "6b4f7cd8f30f44c903a364f0075f42b6bc6eb772b48d82bde6e5222ca08d5ac0",
+    "bytes": 819927
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  }
+}

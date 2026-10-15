@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/darkcomet/.codex/.chatgpt-projects/g-p-6accd13b93f8819188f4cfd113dceb75/refund-office/docs/diagrams/refund-office.architecture.json",
+  "output": "/Users/darkcomet/.codex/.chatgpt-projects/g-p-6accd13b93f8819188f4cfd113dceb75/refund-office/docs/diagrams/refund-office.html",
+  "specification": {
+    "sha256": "27bde125d2ebb93f0971d0b2b1854fc2307949783fbd31205bc2bf4e0c155a7b",
+    "bytes": 7265
+  },
+  "artifact": {
+    "sha256": "af059bfb2527a3231283d5b98220546e333fbb7b5c21542b6896982a3912f3d8",
+    "bytes": 816702
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  }
+}

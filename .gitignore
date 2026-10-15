@@ -1,0 +1,51 @@
+# Dependencies, generated builds and caches
+node_modules/
+dist/
+coverage/
+.cache/
+cache/
+caches/
+.vite/
+vite-cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Local databases, run evidence, exports, staging and deployment state
+.data/
+work/
+deliverables/
+handover/
+migration-prep/
+.vercel/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+*.pid
+*.pid.lock
+
+# Filled environment files and credentials. Only these four templates are shared.
+.env
+.env.*
+*.env
+*.env.*
+!/.env.example
+!/integrations/.env.example
+!/integrations/arize/.env.example
+!/integrations/vercel/hosted.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+credentials.json
+service-account*.json
+
+# Animation capture and encoding work metadata
+docs/images/animated/*.capture.json
+docs/images/animated/*.encoding.json

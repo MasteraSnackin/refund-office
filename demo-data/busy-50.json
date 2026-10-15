@@ -1,0 +1,2644 @@
+{
+  "schemaVersion": 1,
+  "id": "busy-50",
+  "title": "Busy office: 50 synthetic cases",
+  "synthetic": true,
+  "merchant": {
+    "id": "paper-harbour-demo",
+    "name": "Paper Harbour Demo Shop",
+    "currency": "gbp",
+    "synthetic": true
+  },
+  "policy": {
+    "limitMinor": 2500,
+    "version": 1
+  },
+  "orders": [
+    {
+      "id": "SYN-B50-O001",
+      "label": "SYN-B50-O001 · £28.00 · missing mug",
+      "totalMinor": 2800,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O001-L1",
+          "name": "Travel mug",
+          "unitAmountMinor": 2000,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O001-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O001-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O002",
+      "label": "SYN-B50-O002 · £30.50 · two units missing",
+      "totalMinor": 3050,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O002-L1",
+          "name": "Pencil pack",
+          "unitAmountMinor": 750,
+          "ordered": 3,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O002-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O002-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O003",
+      "label": "SYN-B50-O003 · £33.00 · at £25 limit",
+      "totalMinor": 3300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The drawing board is missing. Please refund the drawing board that was not supplied.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O003-L1",
+          "name": "Drawing board",
+          "unitAmountMinor": 2500,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O003-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O003-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O004",
+      "label": "SYN-B50-O004 · £33.01 · above £25 limit",
+      "totalMinor": 3301,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The desk lamp is missing. Please refund the missing desk lamp.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O004-L1",
+          "name": "Desk lamp",
+          "unitAmountMinor": 2501,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O004-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O004-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O005",
+      "label": "SYN-B50-O005 · £23.00 · delivery disputed",
+      "totalMinor": 2300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The tracking says delivered, but I have not received my parcel. Please investigate.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": true,
+        "detail": "Synthetic courier scan says delivered; the fictional request disputes receipt. No delivery photograph or recipient confirmation is supplied."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O005-L1",
+          "name": "Notebook set",
+          "unitAmountMinor": 1500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O005-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O005-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O006",
+      "label": "SYN-B50-O006 · £20.00 · all items packed",
+      "totalMinor": 2000,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The cable pouch is missing. Please check the packing record and refund it.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O006-L1",
+          "name": "Cable pouch",
+          "unitAmountMinor": 1200,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O006-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O006-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O007",
+      "label": "SYN-B50-O007 · £23.00 · damage claim",
+      "totalMinor": 2300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "My desk organiser arrived damaged. Please review the damage and a refund.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O007-L1",
+          "name": "Desk organiser",
+          "unitAmountMinor": 1500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O007-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O007-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O008",
+      "label": "SYN-B50-O008 · £18.00 · ambiguous items",
+      "totalMinor": 1800,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "Some items are missing from my order. Please check the packing record.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O008-L1",
+          "name": "Sketchbook",
+          "unitAmountMinor": 1000,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O008-L2",
+          "name": "Marker set",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O008-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O009",
+      "label": "SYN-B50-O009 · £20.00 · previous remedy",
+      "totalMinor": 2000,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The travel pouch is missing. Please refund the missing travel pouch.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. The omitted item has a labelled historical local remedy fixture."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O009-L1",
+          "name": "Travel pouch",
+          "unitAmountMinor": 1200,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O009-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O009-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O010",
+      "label": "SYN-B50-O010 · £26.00 · original claim",
+      "totalMinor": 2600,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The desk mat is missing. Please refund the missing desk mat.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O010-L1",
+          "name": "Desk mat",
+          "unitAmountMinor": 1800,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O010-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O010-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O012",
+      "label": "SYN-B50-O012 · £16.50 · missing pen set",
+      "totalMinor": 1650,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The pen set is missing from my order. Please refund the missing pen set.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O012-L1",
+          "name": "Pen set",
+          "unitAmountMinor": 850,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O012-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O012-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O013",
+      "label": "SYN-B50-O013 · £22.50 · missing mug",
+      "totalMinor": 2250,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O013-L1",
+          "name": "Travel mug",
+          "unitAmountMinor": 1450,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O013-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O013-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O014",
+      "label": "SYN-B50-O014 · £35.00 · two units missing",
+      "totalMinor": 3500,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O014-L1",
+          "name": "Pencil pack",
+          "unitAmountMinor": 900,
+          "ordered": 3,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O014-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O014-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O015",
+      "label": "SYN-B50-O015 · £33.00 · at £25 limit",
+      "totalMinor": 3300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The drawing board is missing. Please refund the drawing board that was not supplied.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O015-L1",
+          "name": "Drawing board",
+          "unitAmountMinor": 2500,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O015-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O015-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O016",
+      "label": "SYN-B50-O016 · £33.01 · above £25 limit",
+      "totalMinor": 3301,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The desk lamp is missing. Please refund the missing desk lamp.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O016-L1",
+          "name": "Desk lamp",
+          "unitAmountMinor": 2501,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O016-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O016-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O017",
+      "label": "SYN-B50-O017 · £23.00 · delivery disputed",
+      "totalMinor": 2300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The tracking says delivered, but I have not received my parcel. Please investigate.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": true,
+        "detail": "Synthetic courier scan says delivered; the fictional request disputes receipt. No delivery photograph or recipient confirmation is supplied."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O017-L1",
+          "name": "Notebook set",
+          "unitAmountMinor": 1500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O017-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O017-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O018",
+      "label": "SYN-B50-O018 · £20.00 · all items packed",
+      "totalMinor": 2000,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The cable pouch is missing. Please check the packing record and refund it.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O018-L1",
+          "name": "Cable pouch",
+          "unitAmountMinor": 1200,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O018-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O018-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O019",
+      "label": "SYN-B50-O019 · £23.00 · damage claim",
+      "totalMinor": 2300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "My desk organiser arrived damaged. Please review the damage and a refund.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O019-L1",
+          "name": "Desk organiser",
+          "unitAmountMinor": 1500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O019-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O019-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O020",
+      "label": "SYN-B50-O020 · £18.00 · ambiguous items",
+      "totalMinor": 1800,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "Some items are missing from my order. Please check the packing record.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O020-L1",
+          "name": "Sketchbook",
+          "unitAmountMinor": 1000,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O020-L2",
+          "name": "Marker set",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O020-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O021",
+      "label": "SYN-B50-O021 · £20.50 · previous remedy",
+      "totalMinor": 2050,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The travel pouch is missing. Please refund the missing travel pouch.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. The omitted item has a labelled historical local remedy fixture."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O021-L1",
+          "name": "Travel pouch",
+          "unitAmountMinor": 1250,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O021-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O021-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O022",
+      "label": "SYN-B50-O022 · £24.00 · original claim",
+      "totalMinor": 2400,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The desk mat is missing. Please refund the missing desk mat.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O022-L1",
+          "name": "Desk mat",
+          "unitAmountMinor": 1600,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O022-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O022-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O024",
+      "label": "SYN-B50-O024 · £17.50 · missing pen set",
+      "totalMinor": 1750,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The pen set is missing from my order. Please refund the missing pen set.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O024-L1",
+          "name": "Pen set",
+          "unitAmountMinor": 950,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O024-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O024-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O025",
+      "label": "SYN-B50-O025 · £18.00 · missing mug",
+      "totalMinor": 1800,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O025-L1",
+          "name": "Travel mug",
+          "unitAmountMinor": 1000,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O025-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O025-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O026",
+      "label": "SYN-B50-O026 · £41.00 · two units missing",
+      "totalMinor": 4100,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O026-L1",
+          "name": "Pencil pack",
+          "unitAmountMinor": 1100,
+          "ordered": 3,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O026-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O026-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O027",
+      "label": "SYN-B50-O027 · £33.00 · at £25 limit",
+      "totalMinor": 3300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The drawing board is missing. Please refund the drawing board that was not supplied.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O027-L1",
+          "name": "Drawing board",
+          "unitAmountMinor": 2500,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O027-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O027-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O028",
+      "label": "SYN-B50-O028 · £33.01 · above £25 limit",
+      "totalMinor": 3301,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The desk lamp is missing. Please refund the missing desk lamp.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O028-L1",
+          "name": "Desk lamp",
+          "unitAmountMinor": 2501,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O028-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O028-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O029",
+      "label": "SYN-B50-O029 · £23.00 · delivery disputed",
+      "totalMinor": 2300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The tracking says delivered, but I have not received my parcel. Please investigate.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": true,
+        "detail": "Synthetic courier scan says delivered; the fictional request disputes receipt. No delivery photograph or recipient confirmation is supplied."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O029-L1",
+          "name": "Notebook set",
+          "unitAmountMinor": 1500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O029-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O029-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O030",
+      "label": "SYN-B50-O030 · £20.00 · all items packed",
+      "totalMinor": 2000,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The cable pouch is missing. Please check the packing record and refund it.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O030-L1",
+          "name": "Cable pouch",
+          "unitAmountMinor": 1200,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O030-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O030-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O031",
+      "label": "SYN-B50-O031 · £23.00 · damage claim",
+      "totalMinor": 2300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "My desk organiser arrived damaged. Please review the damage and a refund.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O031-L1",
+          "name": "Desk organiser",
+          "unitAmountMinor": 1500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O031-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O031-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O032",
+      "label": "SYN-B50-O032 · £18.00 · ambiguous items",
+      "totalMinor": 1800,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "Some items are missing from my order. Please check the packing record.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O032-L1",
+          "name": "Sketchbook",
+          "unitAmountMinor": 1000,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O032-L2",
+          "name": "Marker set",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O032-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O033",
+      "label": "SYN-B50-O033 · £21.00 · previous remedy",
+      "totalMinor": 2100,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The travel pouch is missing. Please refund the missing travel pouch.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. The omitted item has a labelled historical local remedy fixture."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O033-L1",
+          "name": "Travel pouch",
+          "unitAmountMinor": 1300,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O033-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O033-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O034",
+      "label": "SYN-B50-O034 · £22.00 · original claim",
+      "totalMinor": 2200,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The desk mat is missing. Please refund the missing desk mat.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O034-L1",
+          "name": "Desk mat",
+          "unitAmountMinor": 1400,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O034-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O034-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O036",
+      "label": "SYN-B50-O036 · £18.50 · missing pen set",
+      "totalMinor": 1850,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The pen set is missing from my order. Please refund the missing pen set.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O036-L1",
+          "name": "Pen set",
+          "unitAmountMinor": 1050,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O036-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O036-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O037",
+      "label": "SYN-B50-O037 · £26.00 · missing mug",
+      "totalMinor": 2600,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O037-L1",
+          "name": "Travel mug",
+          "unitAmountMinor": 1800,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O037-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O037-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O038",
+      "label": "SYN-B50-O038 · £26.00 · two units missing",
+      "totalMinor": 2600,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O038-L1",
+          "name": "Pencil pack",
+          "unitAmountMinor": 600,
+          "ordered": 3,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O038-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O038-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O039",
+      "label": "SYN-B50-O039 · £33.00 · at £25 limit",
+      "totalMinor": 3300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The drawing board is missing. Please refund the drawing board that was not supplied.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O039-L1",
+          "name": "Drawing board",
+          "unitAmountMinor": 2500,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O039-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O039-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O040",
+      "label": "SYN-B50-O040 · £33.01 · above £25 limit",
+      "totalMinor": 3301,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The desk lamp is missing. Please refund the missing desk lamp.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O040-L1",
+          "name": "Desk lamp",
+          "unitAmountMinor": 2501,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O040-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O040-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O041",
+      "label": "SYN-B50-O041 · £23.00 · delivery disputed",
+      "totalMinor": 2300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The tracking says delivered, but I have not received my parcel. Please investigate.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": true,
+        "detail": "Synthetic courier scan says delivered; the fictional request disputes receipt. No delivery photograph or recipient confirmation is supplied."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O041-L1",
+          "name": "Notebook set",
+          "unitAmountMinor": 1500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O041-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O041-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O042",
+      "label": "SYN-B50-O042 · £20.00 · all items packed",
+      "totalMinor": 2000,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The cable pouch is missing. Please check the packing record and refund it.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O042-L1",
+          "name": "Cable pouch",
+          "unitAmountMinor": 1200,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O042-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O042-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O043",
+      "label": "SYN-B50-O043 · £23.00 · damage claim",
+      "totalMinor": 2300,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "My desk organiser arrived damaged. Please review the damage and a refund.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O043-L1",
+          "name": "Desk organiser",
+          "unitAmountMinor": 1500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O043-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O043-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O044",
+      "label": "SYN-B50-O044 · £18.00 · ambiguous items",
+      "totalMinor": 1800,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "Some items are missing from my order. Please check the packing record.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O044-L1",
+          "name": "Sketchbook",
+          "unitAmountMinor": 1000,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O044-L2",
+          "name": "Marker set",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O044-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O045",
+      "label": "SYN-B50-O045 · £21.50 · previous remedy",
+      "totalMinor": 2150,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The travel pouch is missing. Please refund the missing travel pouch.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. The omitted item has a labelled historical local remedy fixture."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O045-L1",
+          "name": "Travel pouch",
+          "unitAmountMinor": 1350,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O045-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O045-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O046",
+      "label": "SYN-B50-O046 · £20.00 · original claim",
+      "totalMinor": 2000,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The desk mat is missing. Please refund the missing desk mat.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O046-L1",
+          "name": "Desk mat",
+          "unitAmountMinor": 1200,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O046-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O046-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O048",
+      "label": "SYN-B50-O048 · £19.50 · missing pen set",
+      "totalMinor": 1950,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The pen set is missing from my order. Please refund the missing pen set.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O048-L1",
+          "name": "Pen set",
+          "unitAmountMinor": 1150,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O048-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O048-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O049",
+      "label": "SYN-B50-O049 · £20.50 · missing mug",
+      "totalMinor": 2050,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O049-L1",
+          "name": "Travel mug",
+          "unitAmountMinor": 1250,
+          "ordered": 1,
+          "packed": 0
+        },
+        {
+          "id": "SYN-B50-O049-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O049-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    },
+    {
+      "id": "SYN-B50-O050",
+      "label": "SYN-B50-O050 · £32.00 · two units missing",
+      "totalMinor": 3200,
+      "currency": "gbp",
+      "synthetic": true,
+      "sampleComplaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record.",
+      "delivery": {
+        "status": "delivered",
+        "disputed": false,
+        "detail": "Synthetic parcel received. Quantities below are the supplied fictional packing record."
+      },
+      "lines": [
+        {
+          "id": "SYN-B50-O050-L1",
+          "name": "Pencil pack",
+          "unitAmountMinor": 800,
+          "ordered": 3,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O050-L2",
+          "name": "Pocket notebook",
+          "unitAmountMinor": 500,
+          "ordered": 1,
+          "packed": 1
+        },
+        {
+          "id": "SYN-B50-O050-L3",
+          "name": "Paper clips",
+          "unitAmountMinor": 300,
+          "ordered": 1,
+          "packed": 1
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "SYN-B50-C001",
+      "caseId": "RF-2101",
+      "title": "Travel mug omitted",
+      "shortTitle": "Missing mug",
+      "orderId": "SYN-B50-O001",
+      "complaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug."
+    },
+    {
+      "id": "SYN-B50-C002",
+      "caseId": "RF-2102",
+      "title": "Two pencil packs omitted",
+      "shortTitle": "Two units missing",
+      "orderId": "SYN-B50-O002",
+      "complaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record."
+    },
+    {
+      "id": "SYN-B50-C003",
+      "caseId": "RF-2103",
+      "title": "Exactly at the policy limit",
+      "shortTitle": "At £25 limit",
+      "orderId": "SYN-B50-O003",
+      "complaint": "The drawing board is missing. Please refund the drawing board that was not supplied."
+    },
+    {
+      "id": "SYN-B50-C004",
+      "caseId": "RF-2104",
+      "title": "One penny above the limit",
+      "shortTitle": "Above £25 limit",
+      "orderId": "SYN-B50-O004",
+      "complaint": "The desk lamp is missing. Please refund the missing desk lamp."
+    },
+    {
+      "id": "SYN-B50-C005",
+      "caseId": "RF-2105",
+      "title": "Delivery evidence conflicts",
+      "shortTitle": "Delivery disputed",
+      "orderId": "SYN-B50-O005",
+      "complaint": "The tracking says delivered, but I have not received my parcel. Please investigate."
+    },
+    {
+      "id": "SYN-B50-C006",
+      "caseId": "RF-2106",
+      "title": "Claim conflicts with packing",
+      "shortTitle": "All items packed",
+      "orderId": "SYN-B50-O006",
+      "complaint": "The cable pouch is missing. Please check the packing record and refund it."
+    },
+    {
+      "id": "SYN-B50-C007",
+      "caseId": "RF-2107",
+      "title": "Damage needs different evidence",
+      "shortTitle": "Damage claim",
+      "orderId": "SYN-B50-O007",
+      "complaint": "My desk organiser arrived damaged. Please review the damage and a refund."
+    },
+    {
+      "id": "SYN-B50-C008",
+      "caseId": "RF-2108",
+      "title": "Two missing lines, unclear claim",
+      "shortTitle": "Ambiguous items",
+      "orderId": "SYN-B50-O008",
+      "complaint": "Some items are missing from my order. Please check the packing record."
+    },
+    {
+      "id": "SYN-B50-C009",
+      "caseId": "RF-2109",
+      "title": "Historical remedy already recorded",
+      "shortTitle": "Previous remedy",
+      "orderId": "SYN-B50-O009",
+      "complaint": "The travel pouch is missing. Please refund the missing travel pouch."
+    },
+    {
+      "id": "SYN-B50-C010",
+      "caseId": "RF-2110",
+      "title": "Original desk mat request",
+      "shortTitle": "Original claim",
+      "orderId": "SYN-B50-O010",
+      "complaint": "The desk mat is missing. Please refund the missing desk mat."
+    },
+    {
+      "id": "SYN-B50-C011",
+      "caseId": "RF-2111",
+      "title": "Follow-up for the same desk mat",
+      "shortTitle": "Duplicate claim",
+      "orderId": "SYN-B50-O010",
+      "complaint": "The desk mat is missing. This is a follow-up on the same order and item."
+    },
+    {
+      "id": "SYN-B50-C012",
+      "caseId": "RF-2112",
+      "title": "Pen set omitted",
+      "shortTitle": "Missing pen set",
+      "orderId": "SYN-B50-O012",
+      "complaint": "The pen set is missing from my order. Please refund the missing pen set."
+    },
+    {
+      "id": "SYN-B50-C013",
+      "caseId": "RF-2113",
+      "title": "Travel mug omitted",
+      "shortTitle": "Missing mug",
+      "orderId": "SYN-B50-O013",
+      "complaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug."
+    },
+    {
+      "id": "SYN-B50-C014",
+      "caseId": "RF-2114",
+      "title": "Two pencil packs omitted",
+      "shortTitle": "Two units missing",
+      "orderId": "SYN-B50-O014",
+      "complaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record."
+    },
+    {
+      "id": "SYN-B50-C015",
+      "caseId": "RF-2115",
+      "title": "Exactly at the policy limit",
+      "shortTitle": "At £25 limit",
+      "orderId": "SYN-B50-O015",
+      "complaint": "The drawing board is missing. Please refund the drawing board that was not supplied."
+    },
+    {
+      "id": "SYN-B50-C016",
+      "caseId": "RF-2116",
+      "title": "One penny above the limit",
+      "shortTitle": "Above £25 limit",
+      "orderId": "SYN-B50-O016",
+      "complaint": "The desk lamp is missing. Please refund the missing desk lamp."
+    },
+    {
+      "id": "SYN-B50-C017",
+      "caseId": "RF-2117",
+      "title": "Delivery evidence conflicts",
+      "shortTitle": "Delivery disputed",
+      "orderId": "SYN-B50-O017",
+      "complaint": "The tracking says delivered, but I have not received my parcel. Please investigate."
+    },
+    {
+      "id": "SYN-B50-C018",
+      "caseId": "RF-2118",
+      "title": "Claim conflicts with packing",
+      "shortTitle": "All items packed",
+      "orderId": "SYN-B50-O018",
+      "complaint": "The cable pouch is missing. Please check the packing record and refund it."
+    },
+    {
+      "id": "SYN-B50-C019",
+      "caseId": "RF-2119",
+      "title": "Damage needs different evidence",
+      "shortTitle": "Damage claim",
+      "orderId": "SYN-B50-O019",
+      "complaint": "My desk organiser arrived damaged. Please review the damage and a refund."
+    },
+    {
+      "id": "SYN-B50-C020",
+      "caseId": "RF-2120",
+      "title": "Two missing lines, unclear claim",
+      "shortTitle": "Ambiguous items",
+      "orderId": "SYN-B50-O020",
+      "complaint": "Some items are missing from my order. Please check the packing record."
+    },
+    {
+      "id": "SYN-B50-C021",
+      "caseId": "RF-2121",
+      "title": "Historical remedy already recorded",
+      "shortTitle": "Previous remedy",
+      "orderId": "SYN-B50-O021",
+      "complaint": "The travel pouch is missing. Please refund the missing travel pouch."
+    },
+    {
+      "id": "SYN-B50-C022",
+      "caseId": "RF-2122",
+      "title": "Original desk mat request",
+      "shortTitle": "Original claim",
+      "orderId": "SYN-B50-O022",
+      "complaint": "The desk mat is missing. Please refund the missing desk mat."
+    },
+    {
+      "id": "SYN-B50-C023",
+      "caseId": "RF-2123",
+      "title": "Follow-up for the same desk mat",
+      "shortTitle": "Duplicate claim",
+      "orderId": "SYN-B50-O022",
+      "complaint": "The desk mat is missing. This is a follow-up on the same order and item."
+    },
+    {
+      "id": "SYN-B50-C024",
+      "caseId": "RF-2124",
+      "title": "Pen set omitted",
+      "shortTitle": "Missing pen set",
+      "orderId": "SYN-B50-O024",
+      "complaint": "The pen set is missing from my order. Please refund the missing pen set."
+    },
+    {
+      "id": "SYN-B50-C025",
+      "caseId": "RF-2125",
+      "title": "Travel mug omitted",
+      "shortTitle": "Missing mug",
+      "orderId": "SYN-B50-O025",
+      "complaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug."
+    },
+    {
+      "id": "SYN-B50-C026",
+      "caseId": "RF-2126",
+      "title": "Two pencil packs omitted",
+      "shortTitle": "Two units missing",
+      "orderId": "SYN-B50-O026",
+      "complaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record."
+    },
+    {
+      "id": "SYN-B50-C027",
+      "caseId": "RF-2127",
+      "title": "Exactly at the policy limit",
+      "shortTitle": "At £25 limit",
+      "orderId": "SYN-B50-O027",
+      "complaint": "The drawing board is missing. Please refund the drawing board that was not supplied."
+    },
+    {
+      "id": "SYN-B50-C028",
+      "caseId": "RF-2128",
+      "title": "One penny above the limit",
+      "shortTitle": "Above £25 limit",
+      "orderId": "SYN-B50-O028",
+      "complaint": "The desk lamp is missing. Please refund the missing desk lamp."
+    },
+    {
+      "id": "SYN-B50-C029",
+      "caseId": "RF-2129",
+      "title": "Delivery evidence conflicts",
+      "shortTitle": "Delivery disputed",
+      "orderId": "SYN-B50-O029",
+      "complaint": "The tracking says delivered, but I have not received my parcel. Please investigate."
+    },
+    {
+      "id": "SYN-B50-C030",
+      "caseId": "RF-2130",
+      "title": "Claim conflicts with packing",
+      "shortTitle": "All items packed",
+      "orderId": "SYN-B50-O030",
+      "complaint": "The cable pouch is missing. Please check the packing record and refund it."
+    },
+    {
+      "id": "SYN-B50-C031",
+      "caseId": "RF-2131",
+      "title": "Damage needs different evidence",
+      "shortTitle": "Damage claim",
+      "orderId": "SYN-B50-O031",
+      "complaint": "My desk organiser arrived damaged. Please review the damage and a refund."
+    },
+    {
+      "id": "SYN-B50-C032",
+      "caseId": "RF-2132",
+      "title": "Two missing lines, unclear claim",
+      "shortTitle": "Ambiguous items",
+      "orderId": "SYN-B50-O032",
+      "complaint": "Some items are missing from my order. Please check the packing record."
+    },
+    {
+      "id": "SYN-B50-C033",
+      "caseId": "RF-2133",
+      "title": "Historical remedy already recorded",
+      "shortTitle": "Previous remedy",
+      "orderId": "SYN-B50-O033",
+      "complaint": "The travel pouch is missing. Please refund the missing travel pouch."
+    },
+    {
+      "id": "SYN-B50-C034",
+      "caseId": "RF-2134",
+      "title": "Original desk mat request",
+      "shortTitle": "Original claim",
+      "orderId": "SYN-B50-O034",
+      "complaint": "The desk mat is missing. Please refund the missing desk mat."
+    },
+    {
+      "id": "SYN-B50-C035",
+      "caseId": "RF-2135",
+      "title": "Follow-up for the same desk mat",
+      "shortTitle": "Duplicate claim",
+      "orderId": "SYN-B50-O034",
+      "complaint": "The desk mat is missing. This is a follow-up on the same order and item."
+    },
+    {
+      "id": "SYN-B50-C036",
+      "caseId": "RF-2136",
+      "title": "Pen set omitted",
+      "shortTitle": "Missing pen set",
+      "orderId": "SYN-B50-O036",
+      "complaint": "The pen set is missing from my order. Please refund the missing pen set."
+    },
+    {
+      "id": "SYN-B50-C037",
+      "caseId": "RF-2137",
+      "title": "Travel mug omitted",
+      "shortTitle": "Missing mug",
+      "orderId": "SYN-B50-O037",
+      "complaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug."
+    },
+    {
+      "id": "SYN-B50-C038",
+      "caseId": "RF-2138",
+      "title": "Two pencil packs omitted",
+      "shortTitle": "Two units missing",
+      "orderId": "SYN-B50-O038",
+      "complaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record."
+    },
+    {
+      "id": "SYN-B50-C039",
+      "caseId": "RF-2139",
+      "title": "Exactly at the policy limit",
+      "shortTitle": "At £25 limit",
+      "orderId": "SYN-B50-O039",
+      "complaint": "The drawing board is missing. Please refund the drawing board that was not supplied."
+    },
+    {
+      "id": "SYN-B50-C040",
+      "caseId": "RF-2140",
+      "title": "One penny above the limit",
+      "shortTitle": "Above £25 limit",
+      "orderId": "SYN-B50-O040",
+      "complaint": "The desk lamp is missing. Please refund the missing desk lamp."
+    },
+    {
+      "id": "SYN-B50-C041",
+      "caseId": "RF-2141",
+      "title": "Delivery evidence conflicts",
+      "shortTitle": "Delivery disputed",
+      "orderId": "SYN-B50-O041",
+      "complaint": "The tracking says delivered, but I have not received my parcel. Please investigate."
+    },
+    {
+      "id": "SYN-B50-C042",
+      "caseId": "RF-2142",
+      "title": "Claim conflicts with packing",
+      "shortTitle": "All items packed",
+      "orderId": "SYN-B50-O042",
+      "complaint": "The cable pouch is missing. Please check the packing record and refund it."
+    },
+    {
+      "id": "SYN-B50-C043",
+      "caseId": "RF-2143",
+      "title": "Damage needs different evidence",
+      "shortTitle": "Damage claim",
+      "orderId": "SYN-B50-O043",
+      "complaint": "My desk organiser arrived damaged. Please review the damage and a refund."
+    },
+    {
+      "id": "SYN-B50-C044",
+      "caseId": "RF-2144",
+      "title": "Two missing lines, unclear claim",
+      "shortTitle": "Ambiguous items",
+      "orderId": "SYN-B50-O044",
+      "complaint": "Some items are missing from my order. Please check the packing record."
+    },
+    {
+      "id": "SYN-B50-C045",
+      "caseId": "RF-2145",
+      "title": "Historical remedy already recorded",
+      "shortTitle": "Previous remedy",
+      "orderId": "SYN-B50-O045",
+      "complaint": "The travel pouch is missing. Please refund the missing travel pouch."
+    },
+    {
+      "id": "SYN-B50-C046",
+      "caseId": "RF-2146",
+      "title": "Original desk mat request",
+      "shortTitle": "Original claim",
+      "orderId": "SYN-B50-O046",
+      "complaint": "The desk mat is missing. Please refund the missing desk mat."
+    },
+    {
+      "id": "SYN-B50-C047",
+      "caseId": "RF-2147",
+      "title": "Follow-up for the same desk mat",
+      "shortTitle": "Duplicate claim",
+      "orderId": "SYN-B50-O046",
+      "complaint": "The desk mat is missing. This is a follow-up on the same order and item."
+    },
+    {
+      "id": "SYN-B50-C048",
+      "caseId": "RF-2148",
+      "title": "Pen set omitted",
+      "shortTitle": "Missing pen set",
+      "orderId": "SYN-B50-O048",
+      "complaint": "The pen set is missing from my order. Please refund the missing pen set."
+    },
+    {
+      "id": "SYN-B50-C049",
+      "caseId": "RF-2149",
+      "title": "Travel mug omitted",
+      "shortTitle": "Missing mug",
+      "orderId": "SYN-B50-O049",
+      "complaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug."
+    },
+    {
+      "id": "SYN-B50-C050",
+      "caseId": "RF-2150",
+      "title": "Two pencil packs omitted",
+      "shortTitle": "Two units missing",
+      "orderId": "SYN-B50-O050",
+      "complaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record."
+    }
+  ],
+  "seedOperations": [
+    {
+      "id": "SYN-B50-HISTORY-009",
+      "orderId": "SYN-B50-O009",
+      "lineId": "SYN-B50-O009-L1",
+      "issue": "item_missing",
+      "amountMinor": 1200,
+      "status": "succeeded",
+      "seeded": true,
+      "provider": "local",
+      "idempotencyKey": "refund-office-seed-busy-50-009",
+      "createdAt": "2026-10-01T09:00:00.000Z",
+      "payload": {
+        "operationId": "SYN-B50-HISTORY-009",
+        "idempotencyKey": "refund-office-seed-busy-50-009",
+        "order": {
+          "id": "SYN-B50-O009",
+          "label": "SYN-B50-O009 · £20.00 · previous remedy",
+          "totalMinor": 2000,
+          "currency": "gbp",
+          "synthetic": true,
+          "sampleComplaint": "The travel pouch is missing. Please refund the missing travel pouch.",
+          "delivery": {
+            "status": "delivered",
+            "disputed": false,
+            "detail": "Synthetic parcel received. The omitted item has a labelled historical local remedy fixture."
+          },
+          "lines": [
+            {
+              "id": "SYN-B50-O009-L1",
+              "name": "Travel pouch",
+              "unitAmountMinor": 1200,
+              "ordered": 1,
+              "packed": 0
+            },
+            {
+              "id": "SYN-B50-O009-L2",
+              "name": "Pocket notebook",
+              "unitAmountMinor": 500,
+              "ordered": 1,
+              "packed": 1
+            },
+            {
+              "id": "SYN-B50-O009-L3",
+              "name": "Paper clips",
+              "unitAmountMinor": 300,
+              "ordered": 1,
+              "packed": 1
+            }
+          ]
+        },
+        "amountMinor": 1200,
+        "lineId": "SYN-B50-O009-L1",
+        "issue": "item_missing"
+      },
+      "receipt": {
+        "id": "DEMO-HISTORY-SYN-B50-009",
+        "provider": "local",
+        "amountMinor": 1200,
+        "currency": "gbp",
+        "status": "succeeded",
+        "createdAt": "2026-10-01T09:00:00.000Z",
+        "operationId": "SYN-B50-HISTORY-009",
+        "seeded": true
+      }
+    },
+    {
+      "id": "SYN-B50-HISTORY-021",
+      "orderId": "SYN-B50-O021",
+      "lineId": "SYN-B50-O021-L1",
+      "issue": "item_missing",
+      "amountMinor": 1250,
+      "status": "succeeded",
+      "seeded": true,
+      "provider": "local",
+      "idempotencyKey": "refund-office-seed-busy-50-021",
+      "createdAt": "2026-10-01T09:00:00.000Z",
+      "payload": {
+        "operationId": "SYN-B50-HISTORY-021",
+        "idempotencyKey": "refund-office-seed-busy-50-021",
+        "order": {
+          "id": "SYN-B50-O021",
+          "label": "SYN-B50-O021 · £20.50 · previous remedy",
+          "totalMinor": 2050,
+          "currency": "gbp",
+          "synthetic": true,
+          "sampleComplaint": "The travel pouch is missing. Please refund the missing travel pouch.",
+          "delivery": {
+            "status": "delivered",
+            "disputed": false,
+            "detail": "Synthetic parcel received. The omitted item has a labelled historical local remedy fixture."
+          },
+          "lines": [
+            {
+              "id": "SYN-B50-O021-L1",
+              "name": "Travel pouch",
+              "unitAmountMinor": 1250,
+              "ordered": 1,
+              "packed": 0
+            },
+            {
+              "id": "SYN-B50-O021-L2",
+              "name": "Pocket notebook",
+              "unitAmountMinor": 500,
+              "ordered": 1,
+              "packed": 1
+            },
+            {
+              "id": "SYN-B50-O021-L3",
+              "name": "Paper clips",
+              "unitAmountMinor": 300,
+              "ordered": 1,
+              "packed": 1
+            }
+          ]
+        },
+        "amountMinor": 1250,
+        "lineId": "SYN-B50-O021-L1",
+        "issue": "item_missing"
+      },
+      "receipt": {
+        "id": "DEMO-HISTORY-SYN-B50-021",
+        "provider": "local",
+        "amountMinor": 1250,
+        "currency": "gbp",
+        "status": "succeeded",
+        "createdAt": "2026-10-01T09:00:00.000Z",
+        "operationId": "SYN-B50-HISTORY-021",
+        "seeded": true
+      }
+    },
+    {
+      "id": "SYN-B50-HISTORY-033",
+      "orderId": "SYN-B50-O033",
+      "lineId": "SYN-B50-O033-L1",
+      "issue": "item_missing",
+      "amountMinor": 1300,
+      "status": "succeeded",
+      "seeded": true,
+      "provider": "local",
+      "idempotencyKey": "refund-office-seed-busy-50-033",
+      "createdAt": "2026-10-01T09:00:00.000Z",
+      "payload": {
+        "operationId": "SYN-B50-HISTORY-033",
+        "idempotencyKey": "refund-office-seed-busy-50-033",
+        "order": {
+          "id": "SYN-B50-O033",
+          "label": "SYN-B50-O033 · £21.00 · previous remedy",
+          "totalMinor": 2100,
+          "currency": "gbp",
+          "synthetic": true,
+          "sampleComplaint": "The travel pouch is missing. Please refund the missing travel pouch.",
+          "delivery": {
+            "status": "delivered",
+            "disputed": false,
+            "detail": "Synthetic parcel received. The omitted item has a labelled historical local remedy fixture."
+          },
+          "lines": [
+            {
+              "id": "SYN-B50-O033-L1",
+              "name": "Travel pouch",
+              "unitAmountMinor": 1300,
+              "ordered": 1,
+              "packed": 0
+            },
+            {
+              "id": "SYN-B50-O033-L2",
+              "name": "Pocket notebook",
+              "unitAmountMinor": 500,
+              "ordered": 1,
+              "packed": 1
+            },
+            {
+              "id": "SYN-B50-O033-L3",
+              "name": "Paper clips",
+              "unitAmountMinor": 300,
+              "ordered": 1,
+              "packed": 1
+            }
+          ]
+        },
+        "amountMinor": 1300,
+        "lineId": "SYN-B50-O033-L1",
+        "issue": "item_missing"
+      },
+      "receipt": {
+        "id": "DEMO-HISTORY-SYN-B50-033",
+        "provider": "local",
+        "amountMinor": 1300,
+        "currency": "gbp",
+        "status": "succeeded",
+        "createdAt": "2026-10-01T09:00:00.000Z",
+        "operationId": "SYN-B50-HISTORY-033",
+        "seeded": true
+      }
+    },
+    {
+      "id": "SYN-B50-HISTORY-045",
+      "orderId": "SYN-B50-O045",
+      "lineId": "SYN-B50-O045-L1",
+      "issue": "item_missing",
+      "amountMinor": 1350,
+      "status": "succeeded",
+      "seeded": true,
+      "provider": "local",
+      "idempotencyKey": "refund-office-seed-busy-50-045",
+      "createdAt": "2026-10-01T09:00:00.000Z",
+      "payload": {
+        "operationId": "SYN-B50-HISTORY-045",
+        "idempotencyKey": "refund-office-seed-busy-50-045",
+        "order": {
+          "id": "SYN-B50-O045",
+          "label": "SYN-B50-O045 · £21.50 · previous remedy",
+          "totalMinor": 2150,
+          "currency": "gbp",
+          "synthetic": true,
+          "sampleComplaint": "The travel pouch is missing. Please refund the missing travel pouch.",
+          "delivery": {
+            "status": "delivered",
+            "disputed": false,
+            "detail": "Synthetic parcel received. The omitted item has a labelled historical local remedy fixture."
+          },
+          "lines": [
+            {
+              "id": "SYN-B50-O045-L1",
+              "name": "Travel pouch",
+              "unitAmountMinor": 1350,
+              "ordered": 1,
+              "packed": 0
+            },
+            {
+              "id": "SYN-B50-O045-L2",
+              "name": "Pocket notebook",
+              "unitAmountMinor": 500,
+              "ordered": 1,
+              "packed": 1
+            },
+            {
+              "id": "SYN-B50-O045-L3",
+              "name": "Paper clips",
+              "unitAmountMinor": 300,
+              "ordered": 1,
+              "packed": 1
+            }
+          ]
+        },
+        "amountMinor": 1350,
+        "lineId": "SYN-B50-O045-L1",
+        "issue": "item_missing"
+      },
+      "receipt": {
+        "id": "DEMO-HISTORY-SYN-B50-045",
+        "provider": "local",
+        "amountMinor": 1350,
+        "currency": "gbp",
+        "status": "succeeded",
+        "createdAt": "2026-10-01T09:00:00.000Z",
+        "operationId": "SYN-B50-HISTORY-045",
+        "seeded": true
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "caseId": "SYN-B50-C001",
+      "category": "eligible-missing-item",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 2000
+    },
+    {
+      "caseId": "SYN-B50-C002",
+      "category": "quantity-two-missing",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1500
+    },
+    {
+      "caseId": "SYN-B50-C003",
+      "category": "exact-policy-limit",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 2500
+    },
+    {
+      "caseId": "SYN-B50-C004",
+      "category": "over-policy-limit",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 2501
+    },
+    {
+      "caseId": "SYN-B50-C005",
+      "category": "disputed-delivery",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C006",
+      "category": "all-packed-unsupported",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C007",
+      "category": "damaged-unsupported-issue",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C008",
+      "category": "multiple-missing-ambiguity",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C009",
+      "category": "seeded-historical-remedy",
+      "expectedOutcome": "already-resolved",
+      "expectedAmountMinor": 1200
+    },
+    {
+      "caseId": "SYN-B50-C010",
+      "category": "duplicate-original",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1800
+    },
+    {
+      "caseId": "SYN-B50-C011",
+      "category": "duplicate-follow-up",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1800,
+      "dependsOn": "SYN-B50-C010"
+    },
+    {
+      "caseId": "SYN-B50-C012",
+      "category": "eligible-missing-item",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 850
+    },
+    {
+      "caseId": "SYN-B50-C013",
+      "category": "eligible-missing-item",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1450
+    },
+    {
+      "caseId": "SYN-B50-C014",
+      "category": "quantity-two-missing",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1800
+    },
+    {
+      "caseId": "SYN-B50-C015",
+      "category": "exact-policy-limit",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 2500
+    },
+    {
+      "caseId": "SYN-B50-C016",
+      "category": "over-policy-limit",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 2501
+    },
+    {
+      "caseId": "SYN-B50-C017",
+      "category": "disputed-delivery",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C018",
+      "category": "all-packed-unsupported",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C019",
+      "category": "damaged-unsupported-issue",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C020",
+      "category": "multiple-missing-ambiguity",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C021",
+      "category": "seeded-historical-remedy",
+      "expectedOutcome": "already-resolved",
+      "expectedAmountMinor": 1250
+    },
+    {
+      "caseId": "SYN-B50-C022",
+      "category": "duplicate-original",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1600
+    },
+    {
+      "caseId": "SYN-B50-C023",
+      "category": "duplicate-follow-up",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1600,
+      "dependsOn": "SYN-B50-C022"
+    },
+    {
+      "caseId": "SYN-B50-C024",
+      "category": "eligible-missing-item",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 950
+    },
+    {
+      "caseId": "SYN-B50-C025",
+      "category": "eligible-missing-item",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1000
+    },
+    {
+      "caseId": "SYN-B50-C026",
+      "category": "quantity-two-missing",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 2200
+    },
+    {
+      "caseId": "SYN-B50-C027",
+      "category": "exact-policy-limit",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 2500
+    },
+    {
+      "caseId": "SYN-B50-C028",
+      "category": "over-policy-limit",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 2501
+    },
+    {
+      "caseId": "SYN-B50-C029",
+      "category": "disputed-delivery",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C030",
+      "category": "all-packed-unsupported",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C031",
+      "category": "damaged-unsupported-issue",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C032",
+      "category": "multiple-missing-ambiguity",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C033",
+      "category": "seeded-historical-remedy",
+      "expectedOutcome": "already-resolved",
+      "expectedAmountMinor": 1300
+    },
+    {
+      "caseId": "SYN-B50-C034",
+      "category": "duplicate-original",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1400
+    },
+    {
+      "caseId": "SYN-B50-C035",
+      "category": "duplicate-follow-up",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1400,
+      "dependsOn": "SYN-B50-C034"
+    },
+    {
+      "caseId": "SYN-B50-C036",
+      "category": "eligible-missing-item",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1050
+    },
+    {
+      "caseId": "SYN-B50-C037",
+      "category": "eligible-missing-item",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1800
+    },
+    {
+      "caseId": "SYN-B50-C038",
+      "category": "quantity-two-missing",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1200
+    },
+    {
+      "caseId": "SYN-B50-C039",
+      "category": "exact-policy-limit",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 2500
+    },
+    {
+      "caseId": "SYN-B50-C040",
+      "category": "over-policy-limit",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 2501
+    },
+    {
+      "caseId": "SYN-B50-C041",
+      "category": "disputed-delivery",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C042",
+      "category": "all-packed-unsupported",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C043",
+      "category": "damaged-unsupported-issue",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C044",
+      "category": "multiple-missing-ambiguity",
+      "expectedOutcome": "held",
+      "expectedAmountMinor": 0
+    },
+    {
+      "caseId": "SYN-B50-C045",
+      "category": "seeded-historical-remedy",
+      "expectedOutcome": "already-resolved",
+      "expectedAmountMinor": 1350
+    },
+    {
+      "caseId": "SYN-B50-C046",
+      "category": "duplicate-original",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1200
+    },
+    {
+      "caseId": "SYN-B50-C047",
+      "category": "duplicate-follow-up",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1200,
+      "dependsOn": "SYN-B50-C046"
+    },
+    {
+      "caseId": "SYN-B50-C048",
+      "category": "eligible-missing-item",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1150
+    },
+    {
+      "caseId": "SYN-B50-C049",
+      "category": "eligible-missing-item",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1250
+    },
+    {
+      "caseId": "SYN-B50-C050",
+      "category": "quantity-two-missing",
+      "expectedOutcome": "awaiting-approval",
+      "expectedAmountMinor": 1600
+    }
+  ]
+}

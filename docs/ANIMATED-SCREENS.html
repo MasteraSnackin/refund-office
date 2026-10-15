@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-GB">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Refund Office | Application screen recordings</title>
+<style>
+  :root {font-family:system-ui,sans-serif;color:#e7edf2;background:#0b141b;line-height:1.55}
+  * {box-sizing:border-box}
+  body {margin:0}
+  main {max-width:1120px;margin:auto;padding:40px 24px 64px}
+  header {max-width:850px;margin-bottom:32px}
+  h1 {font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;letter-spacing:-.035em;margin:12px 0 18px}
+  h2 {font-size:1.3rem;margin:0 0 8px}
+  p {margin:0 0 16px;color:#bccbd6}
+  a {color:#a0e5bc;text-underline-offset:3px}
+  a:focus-visible,button:focus-visible,video:focus-visible {outline:3px solid #a0e5bc;outline-offset:4px}
+  .label {font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#a0e5bc}
+  .controls {display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;align-items:center}
+  button {font:inherit;color:#e7edf2;background:#20323c;border:1px solid #4c6574;border-radius:7px;padding:8px 15px;cursor:pointer}
+  button:hover {background:#2c4451}
+  article {border:1px solid #334852;border-radius:12px;background:#121f28;overflow:hidden;margin:0 0 28px}
+  .copy {padding:22px 24px 6px}
+  video {display:block;width:100%;aspect-ratio:16/9;background:#050b10}
+  .links {padding:14px 24px;margin:0;font-size:.9rem}
+  footer {color:#a5b6c2;font-size:.9rem}
+  @media(max-width:600px){main{padding:24px 14px}.copy{padding:18px 16px 2px}.links{padding:12px 16px}}
+</style>
+<main>
+  <header>
+    <a href="../README.md">Return to README</a>
+    <p class="label" style="margin-top:24px">Refund Office · Local synthetic rehearsal · 15 October 2026</p>
+    <h1>See the application in use</h1>
+    <p>Five short recordings from the real local interface. Videos start paused. Play a screen to follow the interaction, or open its still image.</p>
+    <p>These captures inspect saved records. They do not change evidence, approve refunds, submit payments or publish a Miro board.</p>
+    <div class="controls"><button id="pause-all" type="button">Pause all videos</button><span id="playback-status" role="status">All videos start paused.</span></div>
+  </header>
+  <article aria-labelledby="queue-title">
+    <div class="copy"><h2 id="queue-title">Review queue</h2><p>Filter recommendations and holds, search for the missing mug, and read the next permitted action.</p></div>
+    <video controls muted loop playsinline preload="none" poster="images/animated/refund-office-review-queue.jpg" aria-label="Review queue screen recording"><source src="images/animated/refund-office-review-queue.mp4" type="video/mp4">Your browser cannot play this video. Use the download link below.</video>
+    <p class="links"><a href="images/animated/refund-office-review-queue.jpg">Still image</a> · <a href="images/animated/refund-office-review-queue.mp4" download>Download video</a> · <a href="images/animated/refund-office-review-queue.gif">Animated GIF</a></p>
+  </article>
+  <article aria-labelledby="evidence-title">
+    <div class="copy"><h2 id="evidence-title">Evidence inspection</h2><p>Compare the original complaint and £20 recommendation with supplied order prices and packing quantities.</p></div>
+    <video controls muted loop playsinline preload="none" poster="images/animated/refund-office-evidence.jpg" aria-label="Evidence inspection screen recording"><source src="images/animated/refund-office-evidence.mp4" type="video/mp4">Your browser cannot play this video. Use the download link below.</video>
+    <p class="links"><a href="images/animated/refund-office-evidence.jpg">Still image</a> · <a href="images/animated/refund-office-evidence.mp4" download>Download video</a> · <a href="images/animated/refund-office-evidence.gif">Animated GIF</a></p>
+  </article>
+  <article aria-labelledby="history-title">
+    <div class="copy"><h2 id="history-title">Saved investigation replay</h2><p>Judge mode plays three actual saved events in recorded order. Its 1× presentation shows each event for 2.5 seconds. Playback does not rerun the investigation, and presentation time differs from the original elapsed time.</p></div>
+    <video controls muted loop playsinline preload="none" poster="images/animated/refund-office-history.jpg" aria-label="Saved investigation history replay"><source src="images/animated/refund-office-history.mp4" type="video/mp4">Your browser cannot play this video. Use the download link below.</video>
+    <p class="links"><a href="images/animated/refund-office-history.jpg">Still image</a> · <a href="images/animated/refund-office-history.mp4" download>Download video</a> · <a href="images/animated/refund-office-history.gif">Animated GIF</a></p>
+  </article>
+  <article aria-labelledby="miro-title">
+    <div class="copy"><h2 id="miro-title">Prepared Miro source map</h2><p>Expand original source records and their labelled relationships. This inspector shows local preparation, with no Miro publication.</p></div>
+    <video controls muted loop playsinline preload="none" poster="images/animated/refund-office-miro-map.jpg" aria-label="Prepared Miro source map inspection"><source src="images/animated/refund-office-miro-map.mp4" type="video/mp4">Your browser cannot play this video. Use the download link below.</video>
+    <p class="links"><a href="images/animated/refund-office-miro-map.jpg">Still image</a> · <a href="images/animated/refund-office-miro-map.mp4" download>Download video</a> · <a href="images/animated/refund-office-miro-map.gif">Animated GIF</a></p>
+  </article>
+  <article aria-labelledby="canvas-title">
+    <div class="copy"><h2 id="canvas-title">Case canvas navigation</h2><p>Follow Investigation, Policy, Human decision and Outputs. The inspector displays saved records, and the refund remains awaiting approval.</p></div>
+    <video controls muted loop playsinline preload="none" poster="images/animated/refund-office-case-canvas.jpg" aria-label="Case canvas stage navigation"><source src="images/animated/refund-office-case-canvas.mp4" type="video/mp4">Your browser cannot play this video. Use the download link below.</video>
+    <p class="links"><a href="images/animated/refund-office-case-canvas.jpg">Still image</a> · <a href="images/animated/refund-office-case-canvas.mp4" download>Download video</a> · <a href="images/animated/refund-office-case-canvas.gif">Animated GIF</a></p>
+  </article>
+  <footer>Silent browser recordings, using source frames and recorded timing. Still images and pause controls are available throughout. Provider connections and hosted deployment are outside the evidence shown here.</footer>
+</main>
+<script>
+  const videos = Array.from(document.querySelectorAll('video'));
+  const playbackStatus = document.getElementById('playback-status');
+  document.getElementById('pause-all').addEventListener('click', () => {
+    videos.forEach(video => video.pause());
+    playbackStatus.textContent = 'All videos paused.';
+  });
+  videos.forEach(video => video.addEventListener('play', () => {
+    videos.filter(other => other !== video).forEach(other => other.pause());
+    playbackStatus.textContent = 'Playing ' + video.getAttribute('aria-label').toLowerCase() + '.';
+  }));
+</script>
+</html>

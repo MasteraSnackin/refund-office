@@ -1,0 +1,18 @@
+{
+  "diagram_type": "architecture",
+  "output": "/Users/darkcomet/.codex/.chatgpt-projects/g-p-6accd13b93f8819188f4cfd113dceb75/refund-office/docs/diagrams/refund-office.html",
+  "specification_sha256": "27bde125d2ebb93f0971d0b2b1854fc2307949783fbd31205bc2bf4e0c155a7b",
+  "artifact_sha256": "af059bfb2527a3231283d5b98220546e333fbb7b5c21542b6896982a3912f3d8",
+  "validation": "9/9 showcase, 0 errors, 0 warnings",
+  "browser_evidence": "passed",
+  "visual_review": "passed",
+  "correction_rounds": 2,
+  "reviewed_images": [
+    "refund-office.visual-check.1440x900.light.png",
+    "refund-office.visual-check.1440x900.dark.png",
+    "refund-office.visual-check.2048x1320.light.png",
+    "refund-office.visual-check.2048x1320.dark.png"
+  ],
+  "manual_interactions": "passed on final artifact; see refund-office.interactions.json",
+  "parentVisualReview": "Final 1440x900 light and dark screenshots inspected; labels fit and sources are distinguished."
+}

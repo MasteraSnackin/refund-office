@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Refund Office: runtime and integrations",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "review-path",
+        "label": "Investigate and review",
+        "focus": [
+          "reviewer",
+          "office",
+          "api",
+          "workflow",
+          "stores"
+        ],
+        "note": "Local rules prepare a proposal; a selected model is optional. Review records an unpaid reservation, never payment submission."
+      },
+      {
+        "id": "customer-clarification",
+        "label": "Received clarification",
+        "focus": [
+          "reviewer",
+          "office",
+          "api",
+          "workflow",
+          "stores"
+        ],
+        "note": "Record a received statement, preserve the original records and investigate again. A fresh human decision is still required."
+      },
+      {
+        "id": "sponsor-tools",
+        "label": "Saved case views and tools",
+        "focus": [
+          "api",
+          "advisory",
+          "models",
+          "actions",
+          "sponsors",
+          "stores"
+        ],
+        "note": "Model comparison advises. Local chat reads saved records. Consented speech input uses a separate gated ElevenLabs route."
+      },
+      {
+        "id": "hosted-intake",
+        "label": "Prepared hosted intake",
+        "focus": [
+          "intake",
+          "api",
+          "workflow",
+          "stores"
+        ],
+        "note": "Vercel entry point, Supabase identity and a protected n8n hook are prepared; none is deployed here."
+      },
+      {
+        "id": "payment-boundary",
+        "label": "Separate payment authority",
+        "focus": [
+          "reviewer",
+          "office",
+          "api",
+          "workflow",
+          "stores",
+          "executor",
+          "stripe"
+        ],
+        "note": "Hosted reviewers authorise exact test mappings and read saved results. Only the separate executor submits or reconciles."
+      }
+    ],
+    "animation": "trace"
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [
+      40,
+      110
+    ],
+    "cols": 5,
+    "cellW": 180,
+    "cellH": 84,
+    "gapX": 100,
+    "gapY": 140
+  },
+  "components": [
+    {
+      "id": "reviewer",
+      "type": "external",
+      "label": "Human reviewer",
+      "sublabel": "Exact facts and amount",
+      "col": 0,
+      "row": 0,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Required"
+    },
+    {
+      "id": "office",
+      "type": "frontend",
+      "label": "Office interface",
+      "sublabel": "Canvas + local record chat",
+      "col": 0,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "Runtime API",
+      "sublabel": "Local / prepared Vercel",
+      "col": 1,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Identity + role checks"
+    },
+    {
+      "id": "workflow",
+      "type": "backend",
+      "label": "Investigation + review",
+      "sublabel": "Claims, review, authorisation",
+      "col": 2,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Local rules by default"
+    },
+    {
+      "id": "stores",
+      "type": "database",
+      "label": "Case + action stores",
+      "sublabel": "Local / prepared Supabase",
+      "col": 3,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Durable records"
+    },
+    {
+      "id": "executor",
+      "type": "security",
+      "label": "Separate executor",
+      "sublabel": "New test authorisation",
+      "col": 4,
+      "row": 1,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Disabled in preview"
+    },
+    {
+      "id": "stripe",
+      "type": "external",
+      "label": "Stripe",
+      "sublabel": "Test refund + readback",
+      "col": 4,
+      "row": 0,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Prepared, disconnected"
+    },
+    {
+      "id": "advisory",
+      "type": "backend",
+      "label": "Advisory comparison",
+      "sublabel": "Saved evidence only",
+      "col": 1,
+      "row": 0,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Cannot approve"
+    },
+    {
+      "id": "models",
+      "type": "external",
+      "label": "OpenAI · Anthropic",
+      "sublabel": "Proposals / opinions",
+      "col": 2,
+      "row": 0,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Prepared, disconnected"
+    },
+    {
+      "id": "intake",
+      "type": "messagebus",
+      "label": "n8n intake",
+      "sublabel": "Protected bounded hook",
+      "col": 0,
+      "row": 2,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Prepared, inactive"
+    },
+    {
+      "id": "actions",
+      "type": "backend",
+      "label": "Saved-case actions",
+      "sublabel": "Exact revision + ledger",
+      "col": 1,
+      "row": 2,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Cannot change decisions"
+    },
+    {
+      "id": "sponsors",
+      "type": "external",
+      "label": "ElevenLabs · Miro",
+      "sublabel": "Modal · Port",
+      "col": 2,
+      "row": 2,
+      "size": [
+        180,
+        84
+      ],
+      "tag": "Prepared, disconnected"
+    }
+  ],
+  "connections": [
+    {
+      "id": "human-review",
+      "from": "reviewer",
+      "to": "office",
+      "label": "review / authorise",
+      "variant": "security",
+      "labelAt": [
+        130,
+        208
+      ]
+    },
+    {
+      "id": "office-api",
+      "from": "office",
+      "to": "api",
+      "label": "JSON /api",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-workflow",
+      "from": "api",
+      "to": "workflow",
+      "label": "scoped actions",
+      "variant": "emphasis"
+    },
+    {
+      "id": "workflow-stores",
+      "from": "workflow",
+      "to": "stores",
+      "label": "atomic decisions",
+      "variant": "emphasis"
+    },
+    {
+      "id": "new-execution",
+      "from": "stores",
+      "to": "executor",
+      "label": "new authority + claim",
+      "variant": "security",
+      "labelAt": [
+        1110,
+        432
+      ]
+    },
+    {
+      "id": "stripe-test",
+      "from": "executor",
+      "to": "stripe",
+      "label": "test POST + GET",
+      "variant": "dashed"
+    },
+    {
+      "id": "read-advisory",
+      "from": "api",
+      "to": "advisory",
+      "label": "saved packet",
+      "variant": "default"
+    },
+    {
+      "id": "optional-models",
+      "from": "advisory",
+      "to": "models",
+      "label": "gated HTTPS",
+      "variant": "dashed"
+    },
+    {
+      "id": "intake-api",
+      "from": "intake",
+      "to": "api",
+      "label": "intake only",
+      "variant": "dashed"
+    },
+    {
+      "id": "saved-actions",
+      "from": "api",
+      "to": "actions",
+      "label": "manual request",
+      "variant": "default",
+      "labelAt": [
+        410,
+        432
+      ]
+    },
+    {
+      "id": "provider-actions",
+      "from": "actions",
+      "to": "sponsors",
+      "label": "gated HTTPS",
+      "variant": "dashed"
+    },
+    {
+      "id": "action-records",
+      "from": "actions",
+      "to": "stores",
+      "label": "commands / results",
+      "variant": "default",
+      "fromSide": "bottom",
+      "toSide": "bottom",
+      "via": [
+        [
+          410,
+          710
+        ],
+        [
+          970,
+          710
+        ]
+      ],
+      "labelAt": [
+        950,
+        690
+      ]
+    },
+    {
+      "id": "selected-investigator",
+      "from": "workflow",
+      "to": "models",
+      "label": "selected proposal",
+      "variant": "dashed"
+    },
+    {
+      "id": "consented-transcription",
+      "from": "api",
+      "to": "sponsors",
+      "label": "consented STT",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "top",
+      "via": [
+        [
+          550,
+          376
+        ],
+        [
+          550,
+          470
+        ],
+        [
+          690,
+          470
+        ]
+      ],
+      "labelAt": [
+        630,
+        470
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "What runs locally",
+      "items": [
+        "Local rules and record-based chat do not call a model. Approval creates an unpaid reservation.",
+        "Clarification keeps original facts. Reset starts a fresh copy of the same pack; previous runs stay saved."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Ten sponsors, disconnected",
+      "items": [
+        "Vercel, Supabase and n8n are prepared. Every external path needs explicit opt-in.",
+        "Selected models propose; comparison advises. ElevenLabs transcribes or reads; Miro maps; Modal processes text; Port records metadata."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Authority and evidence",
+      "items": [
+        "Chat and transcription cannot authorise payments. Hosted execution still needs a reviewer and a separate executor.",
+        "Motion illustrates topology, not live traffic. Source notes describe prepared code; provider access is unverified."
+      ]
+    }
+  ]
+}

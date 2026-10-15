@@ -1,0 +1,9 @@
+{
+  "boardId": "",
+  "mode": "local-export",
+  "exportFormat": "refund-office-case-board",
+  "importReady": false,
+  "publishEnabled": false,
+  "receiptFile": "",
+  "retryPolicy": "Inspect the board and saved item receipts after any unconfirmed write. Do not automatically replay note creation."
+}

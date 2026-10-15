@@ -1,0 +1,14 @@
+{
+  "identifier": "refund-office-service",
+  "title": "Refund Office service",
+  "description": "Readiness metadata only. No refund, deployment or approval authority.",
+  "schema": {
+    "properties": {
+      "readiness": { "title": "Readiness", "type": "string", "enum": ["offline", "prepared", "configured-unverified"] },
+      "humanApprovalRequired": { "title": "Human approval required", "type": "boolean", "enum": [true] },
+      "liveVerified": { "title": "Live verification completed", "type": "boolean", "enum": [false] }
+    },
+    "required": ["readiness", "humanApprovalRequired", "liveVerified"]
+  },
+  "relations": {}
+}

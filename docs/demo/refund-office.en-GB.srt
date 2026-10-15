@@ -1,0 +1,295 @@
+1
+00:00:00,570 --> 00:00:02,417
+Refund Office turns a missing item into
+
+2
+00:00:02,417 --> 00:00:03,900
+an inspectable decision.
+
+3
+00:00:05,040 --> 00:00:06,638
+The agent investigates.
+
+4
+00:00:06,887 --> 00:00:09,041
+A person controls every refund.
+
+5
+00:00:09,418 --> 00:00:11,767
+The paperwork has entered its dramatic era.
+
+6
+00:00:12,906 --> 00:00:14,193
+Welcome to the office.
+
+7
+00:00:15,523 --> 00:00:17,543
+A customer reports a missing travel mug
+
+8
+00:00:17,543 --> 00:00:19,115
+from a sixty pound order.
+
+9
+00:00:19,784 --> 00:00:22,435
+A convincing complaint is a starting point.
+
+10
+00:00:23,105 --> 00:00:25,392
+The office still needs evidence before recommending
+
+11
+00:00:25,392 --> 00:00:26,533
+any refund.
+
+12
+00:00:30,523 --> 00:00:32,182
+Reception opens the case.
+
+13
+00:00:32,427 --> 00:00:34,804
+Evidence checks the order and packing record.
+
+14
+00:00:35,345 --> 00:00:38,058
+The analyser uses local rules and synthetic
+
+15
+00:00:38,058 --> 00:00:38,737
+data.
+
+16
+00:00:39,393 --> 00:00:42,271
+These desks represent stages of one workflow,
+
+17
+00:00:42,323 --> 00:00:44,050
+rather than separate agents.
+
+18
+00:00:45,546 --> 00:00:47,416
+The packing record shows two of three
+
+19
+00:00:47,416 --> 00:00:48,522
+items supplied.
+
+20
+00:00:48,983 --> 00:00:51,053
+The missing mug costs twenty pounds.
+
+21
+00:00:51,305 --> 00:00:53,906
+That supports a twenty pound proposal, attached
+
+22
+00:00:53,906 --> 00:00:56,007
+to the item, its price and the
+
+23
+00:00:56,007 --> 00:00:57,230
+supporting records.
+
+24
+00:01:00,520 --> 00:01:01,735
+Next comes policy.
+
+25
+00:01:02,127 --> 00:01:05,126
+The service checks evidence, exact amount, remaining
+
+26
+00:01:05,126 --> 00:01:08,060
+balance, previous remedies and the refund limit.
+
+27
+00:01:08,636 --> 00:01:10,929
+Passing these checks makes a proposal eligible
+
+28
+00:01:10,929 --> 00:01:13,484
+for review; it does not authorise payment.
+
+29
+00:01:15,511 --> 00:01:17,184
+This is the deliberate pause.
+
+30
+00:01:17,534 --> 00:01:19,722
+Every new refund waits for a person.
+
+31
+00:01:20,477 --> 00:01:22,631
+The review screen shows the exact amount,
+
+32
+00:01:22,697 --> 00:01:25,027
+order, item and policy version.
+
+33
+00:01:25,453 --> 00:01:27,203
+You can open the evidence before deciding
+
+34
+00:01:27,203 --> 00:01:28,417
+whether to approve.
+
+35
+00:01:30,542 --> 00:01:33,529
+For this isolated demonstration, the reviewer approved
+
+36
+00:01:33,529 --> 00:01:35,832
+twenty pounds and recorded a reason.
+
+37
+00:01:36,569 --> 00:01:38,658
+That decision belongs to these facts.
+
+38
+00:01:39,266 --> 00:01:41,910
+Change the evidence, amount or policy, and
+
+39
+00:01:41,910 --> 00:01:43,783
+the old approval cannot carry the refund
+
+40
+00:01:43,783 --> 00:01:44,256
+through.
+
+41
+00:01:45,521 --> 00:01:47,760
+Only after approval does the saved operation
+
+42
+00:01:47,760 --> 00:01:48,547
+proceed.
+
+43
+00:01:48,875 --> 00:01:51,334
+The demonstration produces a local receipt linked
+
+44
+00:01:51,334 --> 00:01:52,547
+to the approved amount.
+
+45
+00:01:53,562 --> 00:01:54,880
+This is a simulation:
+
+46
+00:01:55,208 --> 00:01:57,209
+no real money moves, and no Stripe
+
+47
+00:01:57,209 --> 00:01:58,484
+transaction is claimed.
+
+48
+00:02:00,535 --> 00:02:02,613
+For a repeat request, the remedy register
+
+49
+00:02:02,613 --> 00:02:04,447
+finds the existing result for the same
+
+50
+00:02:04,447 --> 00:02:05,148
+issue.
+
+51
+00:02:05,608 --> 00:02:08,248
+The outcome is zero additional refund.
+
+52
+00:02:08,801 --> 00:02:11,030
+A second investigation must not become a
+
+53
+00:02:11,030 --> 00:02:12,195
+second payment.
+
+54
+00:02:15,519 --> 00:02:16,996
+Some cases should stop.
+
+55
+00:02:17,663 --> 00:02:19,394
+Here, the delivery record conflicts with the
+
+56
+00:02:19,394 --> 00:02:20,467
+customer report.
+
+57
+00:02:21,261 --> 00:02:22,630
+The office holds the case.
+
+58
+00:02:22,932 --> 00:02:24,781
+A person can request evidence or close
+
+59
+00:02:24,781 --> 00:02:25,697
+it with a reason.
+
+60
+00:02:26,246 --> 00:02:28,519
+Approval cannot erase conflicting evidence.
+
+61
+00:02:30,520 --> 00:02:33,021
+History keeps the complaint, evidence, checks and
+
+62
+00:02:33,021 --> 00:02:34,130
+decisions together.
+
+63
+00:02:34,817 --> 00:02:37,086
+A downloadable decision packet adds the operation
+
+64
+00:02:37,086 --> 00:02:38,004
+and receipt.
+
+65
+00:02:38,468 --> 00:02:40,758
+The local reviewer label identifies this demo's
+
+66
+00:02:40,758 --> 00:02:43,400
+operator; it is not an authenticated production
+
+67
+00:02:43,400 --> 00:02:44,085
+identity.
+
+68
+00:02:45,519 --> 00:02:46,902
+Autonomous preparation.
+
+69
+00:02:47,139 --> 00:02:48,744
+Explicit human approval.
+
+70
+00:02:49,039 --> 00:02:50,219
+A traceable result.
+
+71
+00:02:50,514 --> 00:02:52,649
+The miniature office makes the workflow visible.
+
+72
+00:02:53,088 --> 00:02:55,094
+This prototype uses a local rule based
+
+73
+00:02:55,094 --> 00:02:58,174
+analyser, synthetic records and simulated payments.
+
+74
+00:02:58,363 --> 00:02:59,572
+You remain in charge.

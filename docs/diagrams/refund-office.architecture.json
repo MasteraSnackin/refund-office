@@ -1,0 +1,353 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Refund Office system map",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "review",
+        "label": "Human-controlled refund",
+        "focus": [
+          "operator",
+          "client",
+          "api",
+          "engine",
+          "payment",
+          "store"
+        ],
+        "note": "The local operator approves a recommendation before the engine can submit a new refund."
+      },
+      {
+        "id": "investigation",
+        "label": "Investigation and policy",
+        "focus": [
+          "engine",
+          "fixtures",
+          "analysis",
+          "policy"
+        ],
+        "note": "One local engine checks synthetic evidence, obtains a proposal and applies deterministic rules."
+      },
+      {
+        "id": "optional",
+        "label": "Optional integrations",
+        "focus": [
+          "analysis",
+          "openai",
+          "payment",
+          "stripe"
+        ],
+        "note": "Optional paths exist in source. This map does not establish configured keys or live provider success."
+      },
+      {
+        "id": "static",
+        "label": "Static preview boundary",
+        "focus": [
+          "sites",
+          "client"
+        ],
+        "note": "The Sites package serves assets and an HTML fallback. It has no implemented API or SQLite service."
+      }
+    ],
+    "legend": {
+      "entries": {
+        "database": {
+          "label": "Data source"
+        }
+      }
+    }
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [
+      40,
+      120
+    ],
+    "cols": 5,
+    "cellW": 180,
+    "cellH": 80,
+    "gapX": 90,
+    "gapY": 110
+  },
+  "components": [
+    {
+      "id": "operator",
+      "type": "external",
+      "label": "Local operator",
+      "sublabel": "Review and approve",
+      "col": 0,
+      "row": 0,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "client",
+      "type": "frontend",
+      "label": "Office interface",
+      "sublabel": "React 19 + Vite",
+      "col": 0,
+      "row": 1,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "HTTP API",
+      "sublabel": "Node node:http",
+      "col": 1,
+      "row": 1,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "engine",
+      "type": "backend",
+      "label": "Workflow engine",
+      "sublabel": "One in-process engine",
+      "col": 2,
+      "row": 1,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "store",
+      "type": "database",
+      "label": "SQLite store",
+      "sublabel": "Cases, settings, operations",
+      "col": 3,
+      "row": 1,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "fixtures",
+      "type": "database",
+      "label": "Synthetic orders",
+      "sublabel": "JavaScript constants",
+      "col": 1,
+      "row": 0,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "analysis",
+      "type": "backend",
+      "label": "Analysis adapter",
+      "sublabel": "Local by default",
+      "col": 2,
+      "row": 0,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "openai",
+      "type": "external",
+      "label": "OpenAI",
+      "sublabel": "Optional Responses API",
+      "col": 4,
+      "row": 0,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "policy",
+      "type": "security",
+      "label": "Policy and approval",
+      "sublabel": "Engine functions",
+      "col": 2,
+      "row": 2,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "payment",
+      "type": "backend",
+      "label": "Refund adapter",
+      "sublabel": "Local simulator by default",
+      "col": 3,
+      "row": 2,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "stripe",
+      "type": "external",
+      "label": "Stripe",
+      "sublabel": "Optional test-only adapter",
+      "col": 4,
+      "row": 2,
+      "size": [
+        180,
+        80
+      ]
+    },
+    {
+      "id": "sites",
+      "type": "frontend",
+      "label": "Sites package",
+      "sublabel": "Prepared static hosting",
+      "col": 0,
+      "row": 2,
+      "size": [
+        180,
+        80
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Local service and data",
+      "wraps": [
+        "api",
+        "engine",
+        "store",
+        "fixtures",
+        "analysis",
+        "policy",
+        "payment"
+      ],
+      "pad": 40
+    }
+  ],
+  "connections": [
+    {
+      "id": "operator-client",
+      "from": "operator",
+      "to": "client",
+      "label": "review / approve",
+      "variant": "emphasis",
+      "labelAt": [
+        130,
+        214
+      ]
+    },
+    {
+      "id": "client-api",
+      "from": "client",
+      "to": "api",
+      "label": "HTTP /api",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-engine",
+      "from": "api",
+      "to": "engine",
+      "label": "dispatch",
+      "variant": "emphasis"
+    },
+    {
+      "id": "engine-store",
+      "from": "engine",
+      "to": "store",
+      "label": "load / persist",
+      "variant": "emphasis"
+    },
+    {
+      "id": "engine-fixtures",
+      "from": "engine",
+      "to": "fixtures",
+      "label": "read evidence",
+      "fromSide": "top",
+      "toSide": "right"
+    },
+    {
+      "id": "engine-analysis",
+      "from": "engine",
+      "to": "analysis",
+      "label": "proposeCase",
+      "labelAt": [
+        670,
+        245
+      ]
+    },
+    {
+      "id": "analysis-openai",
+      "from": "analysis",
+      "to": "openai",
+      "label": "HTTPS /v1/responses",
+      "variant": "dashed"
+    },
+    {
+      "id": "engine-policy",
+      "from": "engine",
+      "to": "policy",
+      "label": "check and bind",
+      "variant": "security",
+      "labelAt": [
+        670,
+        404
+      ]
+    },
+    {
+      "id": "engine-payment",
+      "from": "engine",
+      "to": "payment",
+      "label": "approved refund",
+      "variant": "security"
+    },
+    {
+      "id": "payment-stripe",
+      "from": "payment",
+      "to": "stripe",
+      "label": "POST + GET",
+      "variant": "dashed"
+    },
+    {
+      "id": "sites-client",
+      "from": "sites",
+      "to": "client",
+      "label": "static variant",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "One local application",
+      "items": [
+        "Desks visualise one engine, not separate agents.",
+        "Analysis, policy and refund roles run in the same Node process. SQLite stores local state."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Approval before payment",
+      "items": [
+        "Every new refund waits for explicit approval. The reviewer label is unauthenticated.",
+        "Approval and reservation are transactional. Submission state and duplicate keys are persisted."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Evidence and limits",
+      "items": [
+        "Based on inspected local source. Provider and deployment success were not tested.",
+        "Sites serves static assets only. See source notes for file references and verification limits."
+      ]
+    }
+  ]
+}

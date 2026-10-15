@@ -1,0 +1,34 @@
+{
+  "name": "Refund Office - authenticated local intake",
+  "active": false,
+  "nodes": [
+    {
+      "id": "intake-webhook", "name": "Authenticated intake", "type": "n8n-nodes-base.webhook", "typeVersion": 2,
+      "position": [0, 0],
+      "parameters": { "httpMethod": "POST", "path": "refund-office-intake", "authentication": "headerAuth", "responseMode": "responseNode", "options": {} }
+    },
+    {
+      "id": "validate-event", "name": "Validate event", "type": "n8n-nodes-base.code", "typeVersion": 2,
+      "position": [260, 0],
+      "parameters": { "mode": "runOnceForAllItems", "jsCode": "const input = $input.first().json.body;\nif (!input || typeof input !== 'object' || Array.isArray(input)) throw new Error('Provide one intake object.');\nconst { eventId, orderId, complaint } = input;\nif (typeof eventId !== 'string' || !/^[A-Za-z0-9][A-Za-z0-9._:-]{0,119}$/.test(eventId)) throw new Error('A stable event reference is required.');\nif (typeof orderId !== 'string' || !/^[A-Za-z0-9_-]{1,160}$/.test(orderId)) throw new Error('A valid order reference is required.');\nif (typeof complaint !== 'string' || complaint.trim().length < 8 || complaint.length > 4000) throw new Error('The request must contain 8 to 4000 characters.');\nreturn [{ json: { eventId, orderId, complaint: complaint.trim() } }];" }
+    },
+    {
+      "id": "local-intake", "name": "Save local intake", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2,
+      "position": [520, 0],
+      "parameters": { "method": "POST", "url": "http://127.0.0.1:4174/api/intake", "sendBody": true, "specifyBody": "json", "jsonBody": "={{ JSON.stringify({ eventId: $json.eventId, orderId: $json.orderId, complaint: $json.complaint }) }}", "options": { "timeout": 15000, "response": { "response": { "responseFormat": "json" } } } }
+    },
+    {
+      "id": "acknowledge", "name": "Acknowledge saved event", "type": "n8n-nodes-base.respondToWebhook", "typeVersion": 1.4,
+      "position": [780, 0],
+      "parameters": { "respondWith": "json", "responseBody": "={{ { accepted: true, eventId: $json.request.eventId } }}", "options": { "responseCode": 202 } }
+    }
+  ],
+  "connections": {
+    "Authenticated intake": { "main": [[{ "node": "Validate event", "type": "main", "index": 0 }]] },
+    "Validate event": { "main": [[{ "node": "Save local intake", "type": "main", "index": 0 }]] },
+    "Save local intake": { "main": [[{ "node": "Acknowledge saved event", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1", "saveDataSuccessExecution": "none", "saveDataErrorExecution": "none", "saveManualExecutions": false },
+  "pinData": {},
+  "tags": []
+}

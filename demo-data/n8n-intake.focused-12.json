@@ -1,0 +1,62 @@
+[
+  {
+    "eventId": "demo-focused-12-SYN-F12-C001",
+    "orderId": "SYN-F12-O001",
+    "complaint": "My parcel arrived, but the travel mug is missing. Please refund the missing travel mug."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C002",
+    "orderId": "SYN-F12-O002",
+    "complaint": "The pencil pack is missing from my order; two units were not supplied. Please check the packing record."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C003",
+    "orderId": "SYN-F12-O003",
+    "complaint": "The drawing board is missing. Please refund the drawing board that was not supplied."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C004",
+    "orderId": "SYN-F12-O004",
+    "complaint": "The desk lamp is missing. Please refund the missing desk lamp."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C005",
+    "orderId": "SYN-F12-O005",
+    "complaint": "The tracking says delivered, but I have not received my parcel. Please investigate."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C006",
+    "orderId": "SYN-F12-O006",
+    "complaint": "The cable pouch is missing. Please check the packing record and refund it."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C007",
+    "orderId": "SYN-F12-O007",
+    "complaint": "My desk organiser arrived damaged. Please review the damage and a refund."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C008",
+    "orderId": "SYN-F12-O008",
+    "complaint": "Some items are missing from my order. Please check the packing record."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C009",
+    "orderId": "SYN-F12-O009",
+    "complaint": "The travel pouch is missing. Please refund the missing travel pouch."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C010",
+    "orderId": "SYN-F12-O010",
+    "complaint": "The desk mat is missing. Please refund the missing desk mat."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C011",
+    "orderId": "SYN-F12-O010",
+    "complaint": "The desk mat is missing. This is a follow-up on the same order and item."
+  },
+  {
+    "eventId": "demo-focused-12-SYN-F12-C012",
+    "orderId": "SYN-F12-O012",
+    "complaint": "The pen set is missing from my order. Please refund the missing pen set."
+  }
+]
